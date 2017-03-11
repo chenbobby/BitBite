@@ -12,6 +12,7 @@
 		28ADBB8B1E73A62D008BEB89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28ADBB891E73A62D008BEB89 /* Main.storyboard */; };
 		28ADBB8D1E73A62D008BEB89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28ADBB8C1E73A62D008BEB89 /* Assets.xcassets */; };
 		28ADBB901E73A62D008BEB89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28ADBB8E1E73A62D008BEB89 /* LaunchScreen.storyboard */; };
+		28C442EF1E73B2F8008553E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28C442EE1E73B2F8008553E8 /* GoogleService-Info.plist */; };
 		F96741D37822F33F2D0C110B /* Pods_BitBite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB845FF79BBD4D7B0394A5A /* Pods_BitBite.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		28ADBB8C1E73A62D008BEB89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28ADBB8F1E73A62D008BEB89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28ADBB911E73A62D008BEB89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28C442EE1E73B2F8008553E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6CB845FF79BBD4D7B0394A5A /* Pods_BitBite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitBite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		876EC412B3D338015EFD84F5 /* Pods-BitBite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitBite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitBite/Pods-BitBite.debug.xcconfig"; sourceTree = "<group>"; };
 		CA868B0F78C88DD648E02F97 /* Pods-BitBite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitBite.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitBite/Pods-BitBite.release.xcconfig"; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				28ADBB8C1E73A62D008BEB89 /* Assets.xcassets */,
 				28ADBB8E1E73A62D008BEB89 /* LaunchScreen.storyboard */,
 				28ADBB911E73A62D008BEB89 /* Info.plist */,
+				28C442EE1E73B2F8008553E8 /* GoogleService-Info.plist */,
 			);
 			path = BitBite;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28ADBB901E73A62D008BEB89 /* LaunchScreen.storyboard in Resources */,
+				28C442EF1E73B2F8008553E8 /* GoogleService-Info.plist in Resources */,
 				28ADBB8D1E73A62D008BEB89 /* Assets.xcassets in Resources */,
 				28ADBB8B1E73A62D008BEB89 /* Main.storyboard in Resources */,
 			);
@@ -377,6 +381,7 @@
 				28ADBB961E73A62D008BEB89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
