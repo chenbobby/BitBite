@@ -88,15 +88,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3uP-Dw-v6J">
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3uP-Dw-v6J">
                                 <rect key="frame" x="0.0" y="41" width="375" height="44"/>
+                                <color key="barTintColor" red="0.066666666669999999" green="0.61960784310000006" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <navigationItem title="Title" id="gbv-fv-iUI">
                                         <barButtonItem key="leftBarButtonItem" title="Logout" id="CqH-jn-Q9P">
-                                            <color key="tintColor" red="0.066666666669999999" green="0.61960784310000006" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="logoutButtonPressed:" destination="7ED-Qv-VWC" id="Atv-9z-SaH"/>
+                                            </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Settings" id="hsW-HN-p5g">
-                                            <color key="tintColor" red="0.066666666669999999" green="0.61960784310000006" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -107,6 +111,9 @@
                                 <state key="normal" title="Lunch">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="7PT-Wt-jZF" kind="show" id="LvL-Et-zqG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="425-7g-7k7">
                                 <rect key="frame" x="164" y="243" width="46" height="30"/>
@@ -129,6 +136,13 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uc4-v4-mhQ">
+                                <rect key="frame" x="146" y="364" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add Friends">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.066666666669999999" green="0.61960784310000006" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -141,6 +155,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zZ9-E3-mml" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1029.5999999999999" y="427.73613193403304"/>
+        </scene>
+        <!--Maps View Controller-->
+        <scene sceneID="XZc-UJ-Axt">
+            <objects>
+                <viewController id="7PT-Wt-jZF" customClass="MapsViewController" customModule="BitBite" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2et-Df-eU2"/>
+                        <viewControllerLayoutGuide type="bottom" id="iWN-M0-NVO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="z4o-Ak-Edc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0pm-VV-Xc1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4uR-jn-KGl">
+                                <rect key="frame" x="301" y="28" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Recenter"/>
+                                <connections>
+                                    <action selector="recenterButtonPressed:" destination="7PT-Wt-jZF" eventType="touchUpInside" id="rYx-w7-qIX"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iDN-4p-Man">
+                                <rect key="frame" x="0.0" y="370" width="375" height="297"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="0pm-VV-Xc1" id="8yJ-OM-83l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RNz-9C-wf2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1829.5999999999999" y="427.73613193403304"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="BmI-c3-BGQ">
