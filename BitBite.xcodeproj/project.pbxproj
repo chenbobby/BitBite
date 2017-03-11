@@ -14,6 +14,7 @@
 		28ADBB901E73A62D008BEB89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28ADBB8E1E73A62D008BEB89 /* LaunchScreen.storyboard */; };
 		28C442EF1E73B2F8008553E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28C442EE1E73B2F8008553E8 /* GoogleService-Info.plist */; };
 		4CD09CC41E73AB7B00AA259D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD09CC31E73AB7B00AA259D /* RegisterViewController.swift */; };
+		4CD09CC61E73B87100AA259D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD09CC51E73B87000AA259D /* HomeViewController.swift */; };
 		F96741D37822F33F2D0C110B /* Pods_BitBite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB845FF79BBD4D7B0394A5A /* Pods_BitBite.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		28ADBB911E73A62D008BEB89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28C442EE1E73B2F8008553E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4CD09CC31E73AB7B00AA259D /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		4CD09CC51E73B87000AA259D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6CB845FF79BBD4D7B0394A5A /* Pods_BitBite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitBite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		876EC412B3D338015EFD84F5 /* Pods-BitBite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitBite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitBite/Pods-BitBite.debug.xcconfig"; sourceTree = "<group>"; };
 		CA868B0F78C88DD648E02F97 /* Pods-BitBite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitBite.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitBite/Pods-BitBite.release.xcconfig"; sourceTree = "<group>"; };
@@ -67,7 +69,8 @@
 			children = (
 				28ADBB851E73A62D008BEB89 /* AppDelegate.swift */,
 				4CD09CC31E73AB7B00AA259D /* RegisterViewController.swift */,
-				28ADBB871E73A62D008BEB89 /* LoginViewController.swift */,
+				4CD09CC51E73B87000AA259D /* HomeViewController.swift */,
+				28ADBB871E73A62D008BEB89 /* ViewController.swift */,
 				28ADBB891E73A62D008BEB89 /* Main.storyboard */,
 				28ADBB8C1E73A62D008BEB89 /* Assets.xcassets */,
 				28ADBB8E1E73A62D008BEB89 /* LaunchScreen.storyboard */,
@@ -222,6 +225,7 @@
 				4CD09CC41E73AB7B00AA259D /* RegisterViewController.swift in Sources */,
 				28ADBB881E73A62D008BEB89 /* LoginViewController.swift in Sources */,
 				28ADBB861E73A62D008BEB89 /* AppDelegate.swift in Sources */,
+				4CD09CC61E73B87100AA259D /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
