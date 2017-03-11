@@ -11,6 +11,7 @@ import M13Checkbox
 
 class SetupMiscViewController: UIViewController {
     
+    var uid: String?
     var name: String?
     var lunchPref: [String]?
     var dinnerPref: [String]?
@@ -27,12 +28,16 @@ class SetupMiscViewController: UIViewController {
     }
     
     @IBAction func miscFinishButton(_ sender: Any) {
+        
+        //add strings miscPref[] if the checkbox was checked
         if checkState(checkbox: vegetarianCB) { miscPref.append("vegetarian") }
         if checkState(checkbox: veganCB) { miscPref.append("vegan") }
         if checkState(checkbox: glutenCB) { miscPref.append("gluten") }
         
+        performSegue(withIdentifier: "miscToFinal", sender: self)
     }
     
+    //helper function to return Bool from checkboxes
     func checkState(checkbox: M13Checkbox) -> Bool {
         return checkbox._IBCheckState == "Checked"
     }
@@ -43,5 +48,18 @@ class SetupMiscViewController: UIViewController {
         UIView.animate(withDuration: 1.0, delay: 0.3, options: .curveEaseOut, animations: {
             
         })
+    }
+    
+    //send data to next view controller
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "miscToFinal" {
+            let destination = segue.destination as! SetupFinalViewController
+            destination.uid = uid
+            destination.name = name
+            destination.lunchPref = lunchPref
+            destination.dinnerPref = dinnerPref
+            destination.miscPref = miscPref
+        }
+        
     }
 }

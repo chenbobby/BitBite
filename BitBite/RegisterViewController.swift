@@ -8,9 +8,12 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 import Validator
 
 class RegisterViewController: UIViewController {
+    
+    var uid = String()
     
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var emailTextField: UITextField!
@@ -33,7 +36,9 @@ class RegisterViewController: UIViewController {
             FIRAuth.auth()?.createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
                 if error == nil {
                     self.errorLabel.text = "Successfully Registered!"
-                    self.dismiss(animated: true, completion: nil)
+                    self.createAccountData(user: user!)
+                    self.uid = (user?.uid)!
+                    self.performSegue(withIdentifier: "registerToSetup", sender: self)
                 } else {
                     self.errorLabel.text = "Failed to Register"
                 }
@@ -46,8 +51,21 @@ class RegisterViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    func createAccountData(user: FIRUser) {
+        var ref: FIRDatabaseReference!
+        ref = FIRDatabase.database().reference()
+        ref.child("users/" + user.uid).setValue(false)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         errorLabel.text = "Let's make an Account"
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "registerToSetup" {
+            let destination = segue.destination as! SetupNameViewController
+            destination.uid = uid
+        }
     }
 }

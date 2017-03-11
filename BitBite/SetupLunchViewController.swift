@@ -11,12 +11,12 @@ import M13Checkbox
 
 class SetupLunchViewController: UIViewController {
     
+    var uid: String?
     var name: String?
     var lunchPref = [String]()
     
     @IBOutlet weak var dialogLabel: UILabel!
     @IBOutlet weak var lunchView: UIView!
-
     @IBOutlet weak var sandwichCB: M13Checkbox!
     @IBOutlet weak var amerCB: M13Checkbox!
     @IBOutlet weak var mexCB: M13Checkbox!
@@ -29,17 +29,18 @@ class SetupLunchViewController: UIViewController {
     }
     
     @IBAction func lunchToDinnerButton(_ sender: Any) {
+        
+        //add strings lunchPref[] if the checkbox was checked
         if checkState(checkbox: sandwichCB) { lunchPref.append("sandwich") }
         if checkState(checkbox: amerCB) { lunchPref.append("amer") }
         if checkState(checkbox: mexCB) { lunchPref.append("mex") }
         if checkState(checkbox: asianCB) { lunchPref.append("asian") }
         if checkState(checkbox: midEastCB) { lunchPref.append("midEast") }
         
-        print(lunchPref)
-        
         performSegue(withIdentifier: "lunchToDinner", sender: self)
     }
     
+    //helper function to return Bool from checkboxes
     func checkState(checkbox: M13Checkbox) -> Bool {
         return checkbox._IBCheckState == "Checked"
     }
@@ -47,10 +48,6 @@ class SetupLunchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        UIView.animate(withDuration: 1.0, delay: 0.3, options: .curveEaseOut, animations: {
-
-        })
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,9 +55,11 @@ class SetupLunchViewController: UIViewController {
         lunchPref = []
     }
     
+    //send data to next view controller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "lunchToDinner" {
             let destination = segue.destination as! SetupDinnerViewController
+            destination.uid = uid
             destination.name = self.name
             destination.lunchPref = lunchPref
         }

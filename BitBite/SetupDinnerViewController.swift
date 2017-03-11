@@ -11,6 +11,7 @@ import M13Checkbox
 
 class SetupDinnerViewController: UIViewController {
     
+    var uid: String?
     var name: String?
     var lunchPref: [String]?
     var dinnerPref = [String]()
@@ -29,6 +30,7 @@ class SetupDinnerViewController: UIViewController {
 
     @IBAction func dinnertoMiscButton(_ sender: Any) {
         
+        //add strings dinnerPref[] if the checkbox was checked
         if checkState(checkbox: italianCB) { dinnerPref.append("italian") }
         if checkState(checkbox: steakCB) { dinnerPref.append("steak") }
         if checkState(checkbox: mexCB) { dinnerPref.append("mex") }
@@ -38,6 +40,7 @@ class SetupDinnerViewController: UIViewController {
         performSegue(withIdentifier: "dinnerToMisc", sender: self)
     }
     
+    //helper function to return Bool from checkboxes
     func checkState(checkbox: M13Checkbox) -> Bool {
         return checkbox._IBCheckState == "Checked"
     }
@@ -58,6 +61,7 @@ class SetupDinnerViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "dinnerToMisc" {
             let destination = segue.destination as! SetupMiscViewController
+            destination.uid = uid
             destination.name = name
             destination.lunchPref = lunchPref
             destination.dinnerPref = dinnerPref

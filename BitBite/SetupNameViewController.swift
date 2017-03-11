@@ -11,6 +11,7 @@ import Validator
 
 class SetupNameViewController: UIViewController {
     
+    var uid: String?
     
     @IBOutlet weak var dialogLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
@@ -21,6 +22,7 @@ class SetupNameViewController: UIViewController {
     @IBAction func nameToLunchButton(_ sender: Any) {
         errorLabel.text = ""
         
+        //create validation rules and valid character sets for NAME
         let minLengthRule = ValidationRuleLength(min: 1, error: NSError())
         let validCharSet = CharacterSet(charactersIn: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLKMNOPQRSTUVWXYZ0123456789 ")
         let nonwhiteCharSet = CharacterSet(charactersIn: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLKMNOPQRSTUVWXYZ0123456789")
@@ -30,6 +32,7 @@ class SetupNameViewController: UIViewController {
         } else if (nameTextField.text?.rangeOfCharacter(from: validCharSet.inverted) != nil) {
             errorLabel.text = "That name has invalid characters..."
         } else {
+            //no errors; proceed
             errorLabel.text = ""
             performSegue(withIdentifier: "nameToLunch", sender: self)
         }
@@ -38,34 +41,19 @@ class SetupNameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.errorLabel.text = ""
-        
-        self.dialogLabel.alpha = 0
-        self.nameLabel.alpha = 0
-        self.nameTextField.alpha = 0
-        self.errorLabel.alpha = 0
-        self.nameToLunchButton.alpha = 0
-        
-        UIView.animate(withDuration: 1.0, delay: 0.3, options: .curveEaseOut, animations: {
-            self.dialogLabel.center.y += 2.5*(self.dialogLabel.bounds.height)
-            self.dialogLabel.alpha = 1.0
-        })
-        
-        UIView.animate(withDuration: 1.0, delay: 1.3, options: .curveEaseOut, animations: {
-            self.nameLabel.center.x -= self.view.bounds.width
-            self.nameTextField.center.x -= self.view.bounds.width
-            self.errorLabel.center.x -= self.view.bounds.width
-            self.nameToLunchButton.center.x -= self.view.bounds.width
-            self.nameLabel.alpha = 1.0
-            self.nameTextField.alpha = 1.0
-            self.errorLabel.alpha = 1.0
-            self.nameToLunchButton.alpha = 1.0
-        })
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.errorLabel.text = ""
+    }
+    
+    //send data to next view controller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "nameToLunch" {
             let destination = segue.destination as! SetupLunchViewController
+            destination.uid = uid
             destination.name = self.nameTextField.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         }
     }
