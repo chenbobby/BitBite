@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>M13Checkbox.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ObjectMapper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,7 +47,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>748BC9BBD8D19FC9DEB3EB2FF548B364</key>
+		<key>1380A9A6A31A3AA7D8A7429F57A34A56</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>20A9DD9ABBF08BC57372A26C35327BF1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,17 +62,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C974A9E0ED3BAAE246517CDB6EC05D7E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>CD6C9FB6B052E1CF663F8A56041EA163</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FD81D2FE1022E66FE22E230E7744B1EF</key>
+		<key>E73DAB64AA961C064789E8BF6DDD0EF3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F7F7F494CB17418F91C2359A5F41A8FD</key>
 		<dict>
 			<key>primary</key>
 			<true/>

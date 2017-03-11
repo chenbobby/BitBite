@@ -13,6 +13,7 @@
 		28ADBB8D1E73A62D008BEB89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28ADBB8C1E73A62D008BEB89 /* Assets.xcassets */; };
 		28ADBB901E73A62D008BEB89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28ADBB8E1E73A62D008BEB89 /* LaunchScreen.storyboard */; };
 		28C442EF1E73B2F8008553E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28C442EE1E73B2F8008553E8 /* GoogleService-Info.plist */; };
+		28C442F11E73DB95008553E8 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C442F01E73DB95008553E8 /* SetupViewController.swift */; };
 		4CD09CC41E73AB7B00AA259D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD09CC31E73AB7B00AA259D /* RegisterViewController.swift */; };
 		4CD09CC61E73B87100AA259D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD09CC51E73B87000AA259D /* HomeViewController.swift */; };
 		4CD09CCA1E73C45000AA259D /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD09CC91E73C45000AA259D /* MapsViewController.swift */; };
@@ -29,6 +30,7 @@
 		28ADBB8F1E73A62D008BEB89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28ADBB911E73A62D008BEB89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28C442EE1E73B2F8008553E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		28C442F01E73DB95008553E8 /* SetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		4CD09CC31E73AB7B00AA259D /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		4CD09CC51E73B87000AA259D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4CD09CC91E73C45000AA259D /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				4CD09CC31E73AB7B00AA259D /* RegisterViewController.swift */,
 				4CD09CC51E73B87000AA259D /* HomeViewController.swift */,
 				28ADBB871E73A62D008BEB89 /* LoginViewController.swift */,
+				28C442F01E73DB95008553E8 /* SetupViewController.swift */,
 				28ADBB891E73A62D008BEB89 /* Main.storyboard */,
 				28ADBB8C1E73A62D008BEB89 /* Assets.xcassets */,
 				28ADBB8E1E73A62D008BEB89 /* LaunchScreen.storyboard */,
@@ -234,6 +237,7 @@
 				28ADBB881E73A62D008BEB89 /* LoginViewController.swift in Sources */,
 				28ADBB861E73A62D008BEB89 /* AppDelegate.swift in Sources */,
 				4CD09CC61E73B87100AA259D /* HomeViewController.swift in Sources */,
+				28C442F11E73DB95008553E8 /* SetupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
