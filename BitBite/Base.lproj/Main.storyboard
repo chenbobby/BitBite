@@ -40,6 +40,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KvP-vc-F8Q"/>
                                     <segue destination="7ED-Qv-VWC" kind="show" id="934-JA-Zcu"/>
                                 </connections>
                             </button>
@@ -142,9 +143,16 @@
                                     <action selector="backToLoginButton:" destination="TFS-BS-zZR" eventType="touchUpInside" id="emG-RT-Qk2"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bie-Vp-okh">
+                                <rect key="frame" x="168" y="213" width="38" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.98431372549999996" green="0.10980392160000001" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.066666666666666666" green="0.61960784313725492" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.70196078431372544" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="tf7-go-XeG" firstAttribute="top" secondItem="bie-Vp-okh" secondAttribute="bottom" constant="8" id="348-wH-uSn"/>
                             <constraint firstItem="zAh-a9-Xb9" firstAttribute="centerY" secondItem="uxt-WF-l4A" secondAttribute="centerY" id="4uU-rO-oK7"/>
                             <constraint firstItem="zAh-a9-Xb9" firstAttribute="top" secondItem="fQt-Qr-0nV" secondAttribute="bottom" constant="8" id="7sZ-Bl-soh"/>
                             <constraint firstItem="4e0-xn-uI4" firstAttribute="centerX" secondItem="uxt-WF-l4A" secondAttribute="centerX" id="C6s-xW-aM4"/>
@@ -159,17 +167,79 @@
                             <constraint firstItem="4e0-xn-uI4" firstAttribute="top" secondItem="zAh-a9-Xb9" secondAttribute="bottom" constant="8" id="joU-D8-2SW"/>
                             <constraint firstItem="GCW-Yx-Fmc" firstAttribute="centerX" secondItem="uxt-WF-l4A" secondAttribute="centerX" id="mG4-dx-Cmo"/>
                             <constraint firstAttribute="leadingMargin" secondItem="fQt-Qr-0nV" secondAttribute="leading" id="pxT-Dv-IU9"/>
+                            <constraint firstItem="bie-Vp-okh" firstAttribute="centerX" secondItem="uxt-WF-l4A" secondAttribute="centerX" id="rZP-tE-Yht"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="confirmPasswordTextField" destination="zAh-a9-Xb9" id="9cs-ue-rMM"/>
                         <outlet property="emailTextField" destination="tf7-go-XeG" id="l5B-1W-reF"/>
+                        <outlet property="errorLabel" destination="bie-Vp-okh" id="GRs-CN-FGn"/>
                         <outlet property="passwordTextField" destination="fQt-Qr-0nV" id="kbJ-c3-YhH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hSr-1R-maS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1029.5999999999999" y="-391.75412293853077"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7CG-yF-9OK">
+            <objects>
+                <viewController id="tc0-xt-vmt" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6Jk-nd-y5f"/>
+                        <viewControllerLayoutGuide type="bottom" id="JY6-fG-Chc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Z8i-NQ-kT8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Let's get to know you..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fhu-6z-ajf">
+                                <rect key="frame" x="16" y="57" width="343" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YN0-cJ-nqs">
+                                <rect key="frame" x="16" y="142" width="343" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What's your name?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oq8-nC-aLd">
+                                        <rect key="frame" x="8" y="8" width="189" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <color key="textColor" red="1" green="0.70196078429999997" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mr. Bit Bite" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lmf-g4-qAR">
+                                        <rect key="frame" x="8" y="45" width="327" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AuO-je-vOK">
+                                <rect key="frame" x="16" y="245" width="343" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What do you like for lunch?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Pb-3i-anX">
+                                        <rect key="frame" x="8" y="8" width="254" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <color key="textColor" red="1" green="0.70196078429999997" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98431372549019602" green="0.10980392156862745" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S4r-et-Gz4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1728.8" y="-392.65367316341832"/>
         </scene>
     </scenes>
 </document>

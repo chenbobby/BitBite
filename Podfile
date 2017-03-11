@@ -16,8 +16,8 @@ target 'BitBite' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   
-  pod 'FirebaseUI/Auth', '~> 3.0'
-  
   pod 'Validator'
+  
+  pod 'M13Checkbox'
 
 end
