@@ -8,14 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
 
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
-    
-    @IBAction func unwindToLogin(segue: UIStoryboardSegue) {
-        //self.dismiss(animated: true, completion: nil)
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
