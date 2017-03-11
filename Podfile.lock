@@ -47,6 +47,7 @@ PODS:
   - ObjectMapper (2.2.5)
   - UberRides (0.7.0):
     - ObjectMapper (~> 2.0)
+  - Validator (2.1.1)
 
 DEPENDENCIES:
   - Firebase/Auth
@@ -57,6 +58,7 @@ DEPENDENCIES:
   - GooglePlacePicker
   - GooglePlaces
   - UberRides (from `https://github.com/uber/rides-ios-sdk.git`, branch `swift-3-dev`)
+  - Validator
 
 EXTERNAL SOURCES:
   UberRides:
@@ -83,7 +85,8 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 6f8d8b28b7e345549ac471071608170b31cb4977
   ObjectMapper: fb30f71e08470d1e5a20b199fafe1246281db898
   UberRides: 796f4335121c2c8223985329c6979a452edfe083
+  Validator: b1793fbfd0046097551d0edd18e2c30792d69ef5
 
-PODFILE CHECKSUM: 0fea1c0b076cf238ce46a66d7fdc0d317cca6331
+PODFILE CHECKSUM: bc3185209fa78630f7e1c7da9450b8e366cd3882
 
 COCOAPODS: 1.2.0

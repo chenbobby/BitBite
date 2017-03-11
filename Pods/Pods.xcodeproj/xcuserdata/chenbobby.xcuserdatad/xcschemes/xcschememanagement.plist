@@ -29,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Validator.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -37,7 +42,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BD464B5244542FC36DC1202A9F85655F</key>
+		<key>748BC9BBD8D19FC9DEB3EB2FF548B364</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -47,12 +52,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>C974A9E0ED3BAAE246517CDB6EC05D7E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>CD6C9FB6B052E1CF663F8A56041EA163</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EEADEE8E3DE6AD998692A494DB5ED5F4</key>
+		<key>FD81D2FE1022E66FE22E230E7744B1EF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
