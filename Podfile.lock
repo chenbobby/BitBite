@@ -21,6 +21,8 @@ PODS:
   - FirebaseDatabase (3.1.2):
     - FirebaseAnalytics (~> 3.7)
   - FirebaseInstanceID (1.0.9)
+  - FirebaseUI/Auth (3.1.0):
+    - Firebase/Auth
   - GoogleMaps (2.2.0):
     - GoogleMaps/Maps (= 2.2.0)
   - GoogleMaps/Base (2.2.0)
@@ -50,6 +52,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
+  - FirebaseUI/Auth (~> 3.0)
   - GoogleMaps
   - GooglePlacePicker
   - GooglePlaces
@@ -72,6 +75,7 @@ SPEC CHECKSUMS:
   FirebaseCore: 225d40532489835a034b8f4e2c9c87fbf4f615a2
   FirebaseDatabase: 05c96d7b43a7368dc91c07791adb49683e1738d1
   FirebaseInstanceID: 2d0518b1378fe9d685ef40cbdd63d2fdc1125339
+  FirebaseUI: d9e83c4c22dd922c661d85f041a771d1953405a9
   GoogleMaps: 104c418d61ab8a05dff06ed0784c25ea9d37da45
   GooglePlacePicker: 345b1aabd42c9d6d9bf2369c1bae1234d903e764
   GooglePlaces: bca867d5e9da15384c794b945e4226848bc6e9d9
@@ -80,6 +84,6 @@ SPEC CHECKSUMS:
   ObjectMapper: fb30f71e08470d1e5a20b199fafe1246281db898
   UberRides: 796f4335121c2c8223985329c6979a452edfe083
 
-PODFILE CHECKSUM: 913c4c452577fe261323fabdd7865fb781f60f4b
+PODFILE CHECKSUM: 0fea1c0b076cf238ce46a66d7fdc0d317cca6331
 
 COCOAPODS: 1.2.0

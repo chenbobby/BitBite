@@ -15,5 +15,7 @@ target 'BitBite' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
+  
+  pod 'FirebaseUI/Auth', '~> 3.0'
 
 end
