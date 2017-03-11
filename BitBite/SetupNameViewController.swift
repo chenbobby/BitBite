@@ -25,10 +25,10 @@ class SetupNameViewController: UIViewController {
         let validCharSet = CharacterSet(charactersIn: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLKMNOPQRSTUVWXYZ0123456789 ")
         let nonwhiteCharSet = CharacterSet(charactersIn: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLKMNOPQRSTUVWXYZ0123456789")
         
-        if (nameTextField.text?.validate(rule: minLengthRule) != .valid && nameTextField.text?.rangeOfCharacter(from: nonwhiteCharSet) != nil) {
+        if (nameTextField.text?.validate(rule: minLengthRule) != .valid || nameTextField.text?.rangeOfCharacter(from: nonwhiteCharSet) == nil) {
             errorLabel.text = "Please enter a name"
         } else if (nameTextField.text?.rangeOfCharacter(from: validCharSet.inverted) != nil) {
-            errorLabel.text = "That name looks kinda weird..."
+            errorLabel.text = "That name has invalid characters..."
         } else {
             errorLabel.text = ""
             performSegue(withIdentifier: "nameToLunch", sender: self)
@@ -64,7 +64,6 @@ class SetupNameViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("preparing")
         if segue.identifier == "nameToLunch" {
             let destination = segue.destination as! SetupLunchViewController
             destination.name = self.nameTextField.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)

@@ -15,6 +15,9 @@
 		28C442EF1E73B2F8008553E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28C442EE1E73B2F8008553E8 /* GoogleService-Info.plist */; };
 		28C442F11E73DB95008553E8 /* SetupNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C442F01E73DB95008553E8 /* SetupNameViewController.swift */; };
 		28C442F61E746899008553E8 /* SetupLunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C442F51E746899008553E8 /* SetupLunchViewController.swift */; };
+		28C442F81E748520008553E8 /* SetupDinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C442F71E748520008553E8 /* SetupDinnerViewController.swift */; };
+		28C442FA1E748C2C008553E8 /* SetupMiscViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C442F91E748C2C008553E8 /* SetupMiscViewController.swift */; };
+		28C442FC1E749C3D008553E8 /* SetupFinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C442FB1E749C3D008553E8 /* SetupFinalViewController.swift */; };
 		4CD09CC41E73AB7B00AA259D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD09CC31E73AB7B00AA259D /* RegisterViewController.swift */; };
 		4CD09CC61E73B87100AA259D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD09CC51E73B87000AA259D /* HomeViewController.swift */; };
 		4CD09CCA1E73C45000AA259D /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD09CC91E73C45000AA259D /* MapsViewController.swift */; };
@@ -33,6 +36,9 @@
 		28C442EE1E73B2F8008553E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		28C442F01E73DB95008553E8 /* SetupNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupNameViewController.swift; sourceTree = "<group>"; };
 		28C442F51E746899008553E8 /* SetupLunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupLunchViewController.swift; sourceTree = "<group>"; };
+		28C442F71E748520008553E8 /* SetupDinnerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupDinnerViewController.swift; sourceTree = "<group>"; };
+		28C442F91E748C2C008553E8 /* SetupMiscViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupMiscViewController.swift; sourceTree = "<group>"; };
+		28C442FB1E749C3D008553E8 /* SetupFinalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupFinalViewController.swift; sourceTree = "<group>"; };
 		4CD09CC31E73AB7B00AA259D /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		4CD09CC51E73B87000AA259D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4CD09CC91E73C45000AA259D /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +102,9 @@
 			children = (
 				28C442F01E73DB95008553E8 /* SetupNameViewController.swift */,
 				28C442F51E746899008553E8 /* SetupLunchViewController.swift */,
+				28C442F71E748520008553E8 /* SetupDinnerViewController.swift */,
+				28C442F91E748C2C008553E8 /* SetupMiscViewController.swift */,
+				28C442FB1E749C3D008553E8 /* SetupFinalViewController.swift */,
 			);
 			name = SetupViewControllers;
 			sourceTree = "<group>";
@@ -245,11 +254,14 @@
 			files = (
 				4CD09CCA1E73C45000AA259D /* MapsViewController.swift in Sources */,
 				4CD09CC41E73AB7B00AA259D /* RegisterViewController.swift in Sources */,
+				28C442F81E748520008553E8 /* SetupDinnerViewController.swift in Sources */,
 				28ADBB881E73A62D008BEB89 /* LoginViewController.swift in Sources */,
 				28C442F61E746899008553E8 /* SetupLunchViewController.swift in Sources */,
+				28C442FA1E748C2C008553E8 /* SetupMiscViewController.swift in Sources */,
 				28ADBB861E73A62D008BEB89 /* AppDelegate.swift in Sources */,
 				4CD09CC61E73B87100AA259D /* HomeViewController.swift in Sources */,
 				28C442F11E73DB95008553E8 /* SetupNameViewController.swift in Sources */,
+				28C442FC1E749C3D008553E8 /* SetupFinalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
