@@ -36,7 +36,6 @@ class RegisterViewController: UIViewController {
             FIRAuth.auth()?.createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
                 if error == nil {
                     self.errorLabel.text = "Successfully Registered!"
-                    self.createAccountData(user: user!)
                     self.uid = (user?.uid)!
                     self.performSegue(withIdentifier: "registerToSetup", sender: self)
                 } else {
@@ -51,15 +50,9 @@ class RegisterViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    func createAccountData(user: FIRUser) {
-        var ref: FIRDatabaseReference!
-        ref = FIRDatabase.database().reference()
-        ref.child("users/" + user.uid).setValue(false)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        errorLabel.text = "Let's make an Account"
+        errorLabel.text = "Let's make an account"
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

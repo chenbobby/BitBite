@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 import Validator
 
 class LoginViewController: UIViewController {
@@ -32,11 +33,11 @@ class LoginViewController: UIViewController {
             errorLabel.text = "Oops! Please enter password"
         } else {
             errorLabel.text = "Loggin in..."
+            
             FIRAuth.auth()?.signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
                 if error == nil {
                     //User logged in
-                    print(FIRAuth.auth()?.currentUser?.uid)
-                    self.performSegue(withIdentifier: "login", sender: self)
+                    self.checkAccountSetup()
                 } else {
                     self.errorLabel.text = "Failed to Log in"
                 }
@@ -62,7 +63,29 @@ class LoginViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        if FIRAuth.auth()?.currentUser != nil { performSegue(withIdentifier: "login", sender: self) }
+        if FIRAuth.auth()?.currentUser != nil {
+            checkAccountSetup()
+        }
+    }
+    
+    func checkAccountSetup() {
+        let ref = FIRDatabase.database().reference().child("users")
+        ref.child((FIRAuth.auth()?.currentUser?.uid)!).observeSingleEvent(of: .value, with: { (snapshot) in
+            if let snapshotValue = snapshot.value as? NSDictionary {
+                self.performSegue(withIdentifier: "login", sender: self)
+            } else {
+                self.performSegue(withIdentifier: "goSetup", sender: self)
+            }
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goSetup" {
+            let destination = segue.destination as! SetupNameViewController
+            destination.uid = FIRAuth.auth()?.currentUser?.uid
+        }
     }
 
 }

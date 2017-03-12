@@ -16,6 +16,7 @@ class SetupLunchViewController: UIViewController {
     var lunchPref = [String]()
     
     @IBOutlet weak var dialogLabel: UILabel!
+    @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var lunchView: UIView!
     @IBOutlet weak var sandwichCB: M13Checkbox!
     @IBOutlet weak var amerCB: M13Checkbox!
@@ -30,12 +31,19 @@ class SetupLunchViewController: UIViewController {
     
     @IBAction func lunchToDinnerButton(_ sender: Any) {
         
+        errorLabel.text = ""
+        
         //add strings lunchPref[] if the checkbox was checked
         if checkState(checkbox: sandwichCB) { lunchPref.append("sandwich") }
         if checkState(checkbox: amerCB) { lunchPref.append("amer") }
         if checkState(checkbox: mexCB) { lunchPref.append("mex") }
         if checkState(checkbox: asianCB) { lunchPref.append("asian") }
         if checkState(checkbox: midEastCB) { lunchPref.append("midEast") }
+        
+        if lunchPref.isEmpty {
+            errorLabel.text = "C'mon! You have to choose at least 1"
+            return
+        }
         
         performSegue(withIdentifier: "lunchToDinner", sender: self)
     }
@@ -52,17 +60,18 @@ class SetupLunchViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         dialogLabel.text = "Hi " + self.name!
+        errorLabel.text = ""
         lunchPref = []
     }
     
     //send data to next view controller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "lunchToDinner" {
-//            let destination = segue.destination as! SetupDinnerViewController
-//            destination.uid = uid
-//            destination.name = self.name
-//            destination.lunchPref = lunchPref
-//        }
+        if segue.identifier == "lunchToDinner" {
+            let destination = segue.destination as! SetupDinnerViewController2
+            destination.uid = uid
+            destination.name = self.name
+            destination.lunchPref = lunchPref
+        }
 
     }
 }
