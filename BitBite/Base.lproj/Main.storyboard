@@ -1014,7 +1014,7 @@
                                         <color key="textColor" red="1" green="0.70196078429999997" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cZX-NN-XXl" userLabel="SandwichCB" customClass="M13Checkbox" customModule="M13Checkbox">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cZX-NN-XXl" userLabel="ItalianCB" customClass="M13Checkbox" customModule="M13Checkbox">
                                         <rect key="frame" x="8" y="49" width="40" height="40"/>
                                         <color key="backgroundColor" red="0.98431372549999996" green="0.10980392160000001" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="1" green="0.70196078429999997" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -1038,13 +1038,13 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sandwiches" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3z-7y-9Br">
-                                        <rect key="frame" x="56" y="54" width="83.5" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Italian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3z-7y-9Br">
+                                        <rect key="frame" x="56" y="54" width="42.5" height="30"/>
                                         <fontDescription key="fontDescription" name="NewsCycle-Bold" family="News Cycle" pointSize="18"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x1m-HS-1Iw" userLabel="AmerCB" customClass="M13Checkbox" customModule="M13Checkbox">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x1m-HS-1Iw" userLabel="SteakCB" customClass="M13Checkbox" customModule="M13Checkbox">
                                         <rect key="frame" x="8" y="97" width="40" height="40"/>
                                         <color key="backgroundColor" red="0.98431372549999996" green="0.10980392160000001" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="1" green="0.70196078429999997" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -1068,8 +1068,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="American Fast Food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9A-Ik-VdD">
-                                        <rect key="frame" x="56" y="102" width="140" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steakhouse" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9A-Ik-VdD">
+                                        <rect key="frame" x="56" y="102" width="82" height="30"/>
                                         <fontDescription key="fontDescription" name="NewsCycle-Bold" family="News Cycle" pointSize="18"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1173,6 +1173,9 @@
                                         <state key="normal" image="white left">
                                             <color key="titleColor" red="1" green="0.70196078429999997" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="dinnerBackButton:" destination="c6S-Id-ekK" eventType="touchUpInside" id="xWY-XQ-ysP"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INi-st-JmZ">
                                         <rect key="frame" x="252" y="297" width="35" height="30"/>
@@ -1183,6 +1186,9 @@
                                         <state key="normal" image="white right">
                                             <color key="titleColor" red="1" green="0.70196078429999997" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="dinnerToMiscButton:" destination="c6S-Id-ekK" eventType="touchUpInside" id="H9R-kU-dWd"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -1234,6 +1240,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="asianCB" destination="ofD-Gl-hNt" id="Z1i-wf-mG1"/>
+                        <outlet property="italianCB" destination="cZX-NN-XXl" id="Qdc-gW-5QM"/>
+                        <outlet property="mexCB" destination="37P-Ga-RwK" id="uvN-AS-1IS"/>
+                        <outlet property="midEastCB" destination="5ik-ml-35s" id="s6z-zH-5bQ"/>
+                        <outlet property="steakCB" destination="x1m-HS-1Iw" id="Kb7-8Y-qhJ"/>
                         <segue destination="CZ6-vc-cgD" kind="show" identifier="dinnerToMisc" id="wBE-lV-jvp"/>
                     </connections>
                 </viewController>
@@ -1497,22 +1508,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last one. I promise." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4W2-qi-5v0">
-                                <rect key="frame" x="47.5" y="113.5" width="225" height="32"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <rect key="frame" x="39.5" y="58" width="242.5" height="53"/>
+                                <fontDescription key="fontDescription" name="NewsCycle-Bold" family="News Cycle" pointSize="32"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mbf-VH-mEh" userLabel="MiscView">
-                                <rect key="frame" x="16" y="190.5" width="288" height="320"/>
+                                <rect key="frame" x="16" y="141" width="288" height="320"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Any special circumstances?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tn8-39-KMn">
-                                        <rect key="frame" x="8" y="8" width="262" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <rect key="frame" x="8" y="8" width="217" height="33"/>
+                                        <fontDescription key="fontDescription" name="NewsCycle-Bold" family="News Cycle" pointSize="20"/>
                                         <color key="textColor" red="1" green="0.70196078429999997" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P6i-6N-v3a" userLabel="VegetarianCB" customClass="M13Checkbox" customModule="M13Checkbox">
-                                        <rect key="frame" x="8" y="40" width="40" height="40"/>
+                                        <rect key="frame" x="8" y="49" width="40" height="40"/>
                                         <color key="backgroundColor" red="0.98431372549999996" green="0.10980392160000001" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="1" green="0.70196078429999997" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -1536,13 +1547,13 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vegetarian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pt8-XO-DB8">
-                                        <rect key="frame" x="56" y="48" width="97" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <rect key="frame" x="56" y="54" width="74.5" height="30"/>
+                                        <fontDescription key="fontDescription" name="NewsCycle-Bold" family="News Cycle" pointSize="18"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hWb-ro-PUr" userLabel="VeganCB" customClass="M13Checkbox" customModule="M13Checkbox">
-                                        <rect key="frame" x="8" y="88" width="40" height="40"/>
+                                        <rect key="frame" x="8" y="97" width="40" height="40"/>
                                         <color key="backgroundColor" red="0.98431372549999996" green="0.10980392160000001" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="1" green="0.70196078429999997" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -1566,13 +1577,13 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vegan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6id-tl-IeA">
-                                        <rect key="frame" x="56" y="96" width="57" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <rect key="frame" x="56" y="102" width="43" height="30"/>
+                                        <fontDescription key="fontDescription" name="NewsCycle-Bold" family="News Cycle" pointSize="18"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZNC-R7-n9s" userLabel="GlutenCB" customClass="M13Checkbox" customModule="M13Checkbox">
-                                        <rect key="frame" x="8" y="136" width="40" height="40"/>
+                                        <rect key="frame" x="8" y="145" width="40" height="40"/>
                                         <color key="backgroundColor" red="0.98431372549999996" green="0.10980392160000001" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="1" green="0.70196078429999997" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -1596,13 +1607,13 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gluten-Free" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXH-PT-qZf">
-                                        <rect key="frame" x="56" y="144" width="107" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <rect key="frame" x="56" y="150" width="81" height="30"/>
+                                        <fontDescription key="fontDescription" name="NewsCycle-Bold" family="News Cycle" pointSize="18"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dP1-E6-Fx5">
-                                        <rect key="frame" x="14" y="184" width="34" height="30"/>
+                                        <rect key="frame" x="14" y="193" width="34" height="30"/>
                                         <state key="normal" title="Back">
                                             <color key="titleColor" red="1" green="0.70196078429999997" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -1611,7 +1622,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTr-EX-ovl">
-                                        <rect key="frame" x="247" y="184" width="41" height="30"/>
+                                        <rect key="frame" x="247" y="193" width="41" height="30"/>
                                         <state key="normal" title="Finish">
                                             <color key="titleColor" red="1" green="0.70196078429999997" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -1645,9 +1656,9 @@
                         <color key="backgroundColor" red="0.98431372549999996" green="0.10980392160000001" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="4W2-qi-5v0" firstAttribute="centerX" secondItem="S9C-9W-egz" secondAttribute="centerX" id="1MK-Xo-DrM"/>
-                            <constraint firstItem="mbf-VH-mEh" firstAttribute="centerY" secondItem="S9C-9W-egz" secondAttribute="centerY" constant="66.5" id="2HE-EH-Ifv"/>
+                            <constraint firstItem="mbf-VH-mEh" firstAttribute="centerY" secondItem="S9C-9W-egz" secondAttribute="centerY" constant="17" id="2HE-EH-Ifv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mbf-VH-mEh" secondAttribute="trailing" id="Aqq-Bs-aPV"/>
-                            <constraint firstItem="mbf-VH-mEh" firstAttribute="top" secondItem="4W2-qi-5v0" secondAttribute="bottom" constant="45" id="Gjf-JG-9An"/>
+                            <constraint firstItem="mbf-VH-mEh" firstAttribute="top" secondItem="4W2-qi-5v0" secondAttribute="bottom" constant="30" id="Gjf-JG-9An"/>
                             <constraint firstAttribute="leadingMargin" secondItem="mbf-VH-mEh" secondAttribute="leading" id="ZeH-Zb-Ent"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cTr-EX-ovl" secondAttribute="trailing" id="gdz-v9-8of"/>
                         </constraints>

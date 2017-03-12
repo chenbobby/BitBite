@@ -22,8 +22,7 @@ class SetupDinnerViewController2: UIViewController {
     @IBOutlet weak var mexCB: M13Checkbox!
     @IBOutlet weak var asianCB: M13Checkbox!
     @IBOutlet weak var midEastCB: M13Checkbox!
-    
-    
+
     @IBAction func dinnerBackButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
