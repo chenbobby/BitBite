@@ -104,6 +104,7 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, UITableVi
                     self.tableView.reloadData()
                     self.restaurantItems.append(RestaurantItem(title: item.name!, phoneNumber: item.phoneNumber, latitude: String(item.placemark.coordinate.latitude), longitude: String(item.placemark.coordinate.longitude)))
                     
+                   
                     
                     //add the annotations to map
                     let annotation = MKPointAnnotation()
@@ -161,7 +162,13 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, UITableVi
         latitude = restaurantItems[indexPath.row].latitude
         longitude = restaurantItems[indexPath.row].longitude
         name = restaurantItems[indexPath.row].title
-        //phoneNumber = restaurantItems[indexPath.row].phoneNumber
+        if restaurantItems[indexPath.row].phoneNumber != nil{
+            phoneNumber = restaurantItems[indexPath.row].phoneNumber!
+        }
+        else{
+            phoneNumber = "No phone number available"
+        }
+        
         performSegue(withIdentifier: "goToTransportation", sender: self)
     }
     
