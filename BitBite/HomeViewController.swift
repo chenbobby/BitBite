@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class HomeViewController: UIViewController {
     
@@ -20,9 +22,10 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func logoutButtonPressed(_ sender: Any) {
-       self.dismiss(animated: true, completion: nil)
+    @IBAction func logoutButton(_ sender: Any) {
+        try! FIRAuth.auth()?.signOut()
         
+        self.dismiss(animated: true, completion: nil)
     }
-    
+
 }

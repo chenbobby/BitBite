@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TFS-BS-zZR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -41,7 +41,6 @@
                                 </state>
                                 <connections>
                                     <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KvP-vc-F8Q"/>
-                                    <segue destination="7ED-Qv-VWC" kind="show" id="934-JA-Zcu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eea-0X-rA9">
@@ -53,6 +52,12 @@
                                     <segue destination="TFS-BS-zZR" kind="show" id="Fn9-qE-DIk"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QFB-FU-7Cf">
+                                <rect key="frame" x="172" y="202" width="31" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.98431372549999996" green="0.10980392160000001" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.066666666666666666" green="0.61960784313725492" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -61,6 +66,8 @@
                             <constraint firstItem="eea-0X-rA9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="74g-hz-vmD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="uyw-6s-Jbv" secondAttribute="trailing" id="C2P-fy-ZhL"/>
                             <constraint firstItem="uyw-6s-Jbv" firstAttribute="top" secondItem="FA6-I4-NyI" secondAttribute="bottom" constant="19" id="Cjh-db-dZn"/>
+                            <constraint firstItem="QFB-FU-7Cf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GFY-HH-4Hd"/>
+                            <constraint firstItem="FA6-I4-NyI" firstAttribute="top" secondItem="QFB-FU-7Cf" secondAttribute="bottom" constant="8" id="J3W-LD-gRB"/>
                             <constraint firstItem="Eem-JF-lhQ" firstAttribute="top" secondItem="uyw-6s-Jbv" secondAttribute="bottom" constant="8" id="ZL3-kZ-cRJ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eea-0X-rA9" secondAttribute="bottom" constant="20" id="bH1-8i-jN4"/>
                             <constraint firstItem="uyw-6s-Jbv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-6" id="bf0-nS-xOl"/>
@@ -70,12 +77,14 @@
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="FA6-I4-NyI" id="fq5-FN-Ljf"/>
+                        <outlet property="errorLabel" destination="QFB-FU-7Cf" id="Wbg-CF-4qL"/>
                         <outlet property="passwordTextField" destination="uyw-6s-Jbv" id="XVj-K5-4zG"/>
+                        <segue destination="7ED-Qv-VWC" kind="show" identifier="login" id="PBa-IC-vnG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="86" y="42"/>
+            <point key="canvasLocation" x="101.59999999999999" y="52.623688155922046"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="V5c-UG-2Xt">
@@ -97,7 +106,7 @@
                                         <barButtonItem key="leftBarButtonItem" title="Logout" id="CqH-jn-Q9P">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
-                                                <action selector="logoutButtonPressed:" destination="7ED-Qv-VWC" id="Atv-9z-SaH"/>
+                                                <action selector="logoutButton:" destination="7ED-Qv-VWC" id="Ktu-ut-Tey"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Settings" id="hsW-HN-p5g">
@@ -1064,10 +1073,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="V9D-Wg-RfP" kind="unwind" identifier="unwind" unwindAction="unwindFromSetupFinalWithSegue:" id="7lj-8X-nwr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ynd-Lu-Owl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="V9D-Wg-RfP" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4508" y="-392.65367316341832"/>
+            <point key="canvasLocation" x="4601" y="-394"/>
         </scene>
     </scenes>
 </document>

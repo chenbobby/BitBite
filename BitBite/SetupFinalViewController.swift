@@ -20,8 +20,9 @@ class SetupFinalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        updateAccount()
-        
+        //updateAccount()
+        print("done finishing")
+        self.performSegue(withIdentifier: "unwind", sender: self)
         
     }
     
@@ -52,6 +53,7 @@ class SetupFinalViewController: UIViewController {
         checkAndPostPref(pref: miscPref!, ref: miscRef, category: "gluten")
     }
     
+    
     //helper function for checking contents of prefs and updating Firebase
     func checkAndPostPref(pref: [String], ref: FIRDatabaseReference, category: String) {
         
@@ -71,9 +73,6 @@ class SetupFinalViewController: UIViewController {
             } else {
                 ref.child(category).setValue(0)
             }
-            break
-        default:
-            //i dunno when this would happen. i dunno what to do.
             break
         }
     }
