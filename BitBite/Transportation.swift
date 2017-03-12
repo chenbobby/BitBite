@@ -18,12 +18,15 @@ class Transportation: UIViewController {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var phoneNumber: UILabel!
     
+    var coordinatesString: String?
+    
+    
+    
     @IBAction func driveMyselfPressed(_ sender: Any) {
         let testURL = URL(string: "comgooglemaps-x-callback://")!
         if UIApplication.shared.canOpenURL(testURL) {
-            let directionsRequest = "comgooglemaps-x-callback://" +
-                "?daddr=John+F.+Kennedy+International+Airport,+Van+Wyck+Expressway,+Jamaica,+New+York" +
-            "&x-success=sourceapp://?resume=true&x-source=AirApp"
+            let directionsRequest = "comgooglemapsurl://maps.google.com/?q="  + self.coordinatesString! +
+            "&x-source=SourceApp&x-success=sourceapp://?resume=true"
             
             let directionsURL = URL(string: directionsRequest)!
             UIApplication.shared.openURL(directionsURL)
@@ -45,6 +48,8 @@ class Transportation: UIViewController {
         self.long.text = longitude
         self.name.text = nameOf
         self.phoneNumber.text = phoneNumberOf
+        
+        coordinatesString = latitude! + "," + longitude!
         
         // ride request button
         let button = RideRequestButton()
