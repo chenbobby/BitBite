@@ -13,6 +13,7 @@ import MapKit
 
 class MapsViewController: UIViewController, CLLocationManagerDelegate, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var titleLabel: UINavigationItem!
     var manager = CLLocationManager()
     var updateCount = 0
     var restaurantItems = [RestaurantItem]()
@@ -25,6 +26,8 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, UITableVi
     var name = String()
     var phoneNumber = String()
     
+    var query: String?
+    
     @IBOutlet weak var mapView: MKMapView!
     
     @IBOutlet weak var mapItem: UILabel!
@@ -35,6 +38,7 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, UITableVi
         manager.delegate = self
         tableView.dataSource = self
         tableView.delegate = self
+        self.titleLabel.title = self.query
         
         
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse{
@@ -69,7 +73,7 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, UITableVi
         let request = MKLocalSearchRequest()
         //replace this with data passed from the food picking algorithm
         
-        request.naturalLanguageQuery = "pizza"
+        request.naturalLanguageQuery = self.query
         request.region = MKCoordinateRegionMakeWithDistance(manager.location!.coordinate, 3000, 3000)
         let search = MKLocalSearch(request: request)
         

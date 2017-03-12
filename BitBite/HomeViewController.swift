@@ -84,14 +84,12 @@ class HomeViewController: UIViewController {
                 }
             }
             self.query.append(cumulative[self.randRange(lower: 0, upper: (cumulative.count-1))])
-            
-            print(self.formatQuery())
+            self.performSegue(withIdentifier: "toMapSearch", sender: self)
             
         }) { (error) in
             print(error.localizedDescription)
         }
-        print("tapped lunch")
-        //performSegue(withIdentifier: "toMapSearch", sender: self)
+        
     }
     
     func tapLunchFriends(_ sender: UITapGestureRecognizer) {
@@ -157,6 +155,13 @@ class HomeViewController: UIViewController {
         
         formattedQuery.append("food")
         return formattedQuery.joined(separator: " ")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toMapSearch" {
+            let destination = segue.destination as! MapsViewController
+            destination.query = self.formatQuery()
+        }
     }
 
 }

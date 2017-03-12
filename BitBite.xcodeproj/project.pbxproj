@@ -95,7 +95,6 @@
 				4CD09CC51E73B87000AA259D /* HomeViewController.swift */,
 				28C443011E74E6C7008553E8 /* MenuViewController.swift */,
 				28ADBB871E73A62D008BEB89 /* LoginViewController.swift */,
-				28C442F01E73DB95008553E8 /* SetupNameViewController.swift */,
 				4C0872781E75104900C43116 /* SelfDriveController.swift */,
 				4CD09CCD1E74703C00AA259D /* RestaurantModel.swift */,
 				28ADBB891E73A62D008BEB89 /* Main.storyboard */,
@@ -112,6 +111,7 @@
 		28C442F41E745EA0008553E8 /* SetupViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				28C442F01E73DB95008553E8 /* SetupNameViewController.swift */,
 				28C442F51E746899008553E8 /* SetupLunchViewController.swift */,
 				28C442F71E748520008553E8 /* SetupDinnerViewController.swift */,
 				28C442F91E748C2C008553E8 /* SetupMiscViewController.swift */,
