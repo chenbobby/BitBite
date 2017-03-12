@@ -18,6 +18,8 @@
 		28C442FA1E748C2C008553E8 /* SetupMiscViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C442F91E748C2C008553E8 /* SetupMiscViewController.swift */; };
 		28C442FC1E749C3D008553E8 /* SetupFinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C442FB1E749C3D008553E8 /* SetupFinalViewController.swift */; };
 		28C443021E74E6C7008553E8 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C443011E74E6C7008553E8 /* MenuViewController.swift */; };
+		28E37EFA1E7523CC00C5C24B /* NewsCycle-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 28E37EF81E7523CC00C5C24B /* NewsCycle-Bold.ttf */; };
+		28E37EFB1E7523CC00C5C24B /* NewsCycle-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 28E37EF91E7523CC00C5C24B /* NewsCycle-Regular.ttf */; };
 		4C0872771E74DE2200C43116 /* Transportation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0872761E74DE2200C43116 /* Transportation.swift */; };
 		4C0872791E75104900C43116 /* SelfDriveController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0872781E75104900C43116 /* SelfDriveController.swift */; };
 		4CD09CC41E73AB7B00AA259D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD09CC31E73AB7B00AA259D /* RegisterViewController.swift */; };
@@ -43,6 +45,8 @@
 		28C442F91E748C2C008553E8 /* SetupMiscViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupMiscViewController.swift; sourceTree = "<group>"; };
 		28C442FB1E749C3D008553E8 /* SetupFinalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupFinalViewController.swift; sourceTree = "<group>"; };
 		28C443011E74E6C7008553E8 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		28E37EF81E7523CC00C5C24B /* NewsCycle-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NewsCycle-Bold.ttf"; path = "../../../Downloads/News_Cycle/NewsCycle-Bold.ttf"; sourceTree = "<group>"; };
+		28E37EF91E7523CC00C5C24B /* NewsCycle-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NewsCycle-Regular.ttf"; path = "../../../Downloads/News_Cycle/NewsCycle-Regular.ttf"; sourceTree = "<group>"; };
 		4C0872761E74DE2200C43116 /* Transportation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transportation.swift; sourceTree = "<group>"; };
 		4C0872781E75104900C43116 /* SelfDriveController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfDriveController.swift; sourceTree = "<group>"; };
 		4CD09CC31E73AB7B00AA259D /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +75,7 @@
 		28ADBB791E73A62D008BEB89 = {
 			isa = PBXGroup;
 			children = (
+				28E37EFC1E7523E100C5C24B /* Resources */,
 				28ADBB841E73A62D008BEB89 /* BitBite */,
 				28ADBB831E73A62D008BEB89 /* Products */,
 				A0D7EB413C18D614B107D16D /* Pods */,
@@ -118,6 +123,15 @@
 				28C442FB1E749C3D008553E8 /* SetupFinalViewController.swift */,
 			);
 			name = SetupViewControllers;
+			sourceTree = "<group>";
+		};
+		28E37EFC1E7523E100C5C24B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				28E37EF81E7523CC00C5C24B /* NewsCycle-Bold.ttf */,
+				28E37EF91E7523CC00C5C24B /* NewsCycle-Regular.ttf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		A0D7EB413C18D614B107D16D /* Pods */ = {
@@ -204,7 +218,9 @@
 				28ADBB901E73A62D008BEB89 /* LaunchScreen.storyboard in Resources */,
 				28C442EF1E73B2F8008553E8 /* GoogleService-Info.plist in Resources */,
 				28ADBB8D1E73A62D008BEB89 /* Assets.xcassets in Resources */,
+				28E37EFB1E7523CC00C5C24B /* NewsCycle-Regular.ttf in Resources */,
 				28ADBB8B1E73A62D008BEB89 /* Main.storyboard in Resources */,
+				28E37EFA1E7523CC00C5C24B /* NewsCycle-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
