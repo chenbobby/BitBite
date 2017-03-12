@@ -20,10 +20,14 @@ class SetupFinalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
         updateAccount()
         print("done finishing")
-        self.performSegue(withIdentifier: "go", sender: self)
-        
+        self.performSegue(withIdentifier: "finishSetup", sender: self)
     }
     
     
@@ -74,6 +78,12 @@ class SetupFinalViewController: UIViewController {
                 ref.child(category).setValue(0)
             }
             break
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "finishSetup" {
+            
         }
     }
 }

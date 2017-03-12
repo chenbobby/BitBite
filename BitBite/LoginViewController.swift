@@ -48,6 +48,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.hideKeyboardWhenTappedAround()
+        
         FIRAuth.auth()?.addStateDidChangeListener({ (auth, user) in
             print("AuthListener Added")
             print(auth.currentUser?.uid)
@@ -64,6 +66,8 @@ class LoginViewController: UIViewController {
         super.viewDidAppear(animated)
         
         if FIRAuth.auth()?.currentUser != nil {
+            emailTextField.text = FIRAuth.auth()?.currentUser?.email
+            passwordTextField.text = "supersecret"
             checkAccountSetup()
         }
     }
@@ -88,5 +92,16 @@ class LoginViewController: UIViewController {
         }
     }
 
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }
 
