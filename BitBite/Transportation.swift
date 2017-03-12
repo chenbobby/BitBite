@@ -21,6 +21,11 @@ class Transportation: UIViewController {
     
     var coordinatesString: String?
     
+    var latitude: String?
+    var longitude: String?
+    var nameOf: String?
+    var phoneNumberOf: String?
+    
     
     
     @IBAction func driveMyselfPressed(_ sender: Any) {
@@ -67,11 +72,5 @@ class Transportation: UIViewController {
         //put the button in the view
         view.addSubview(button)
     }
-    
-    var latitude: String?
-    var longitude: String?
-    var nameOf: String?
-    var phoneNumberOf: String?
-    
     
 }

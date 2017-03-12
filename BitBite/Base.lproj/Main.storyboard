@@ -53,7 +53,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QFB-FU-7Cf">
-                                <rect key="frame" x="143.5" y="271" width="33.5" height="28"/>
+                                <rect key="frame" x="144" y="271" width="33.5" height="28"/>
                                 <fontDescription key="fontDescription" name="NewsCycle-Bold" family="News Cycle" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -150,7 +150,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wq1-io-ULG" userLabel="DinnerView">
-                                <rect key="frame" x="16" y="277.5" width="288" height="120"/>
+                                <rect key="frame" x="16" y="278" width="288" height="120"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dinner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MhO-eH-EeR">
                                         <rect key="frame" x="16" y="16" width="79" height="32"/>
@@ -251,7 +251,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I6K-a9-u2w" userLabel="BarsView">
-                                <rect key="frame" x="16" y="417.5" width="288" height="120"/>
+                                <rect key="frame" x="16" y="418" width="288" height="120"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bars &amp; Clubs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zax-eB-09T">
                                         <rect key="frame" x="16" y="16" width="150" height="32"/>
@@ -364,7 +364,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YOS-NE-wCQ" userLabel="LunchView">
-                                <rect key="frame" x="16" y="137.5" width="288" height="120"/>
+                                <rect key="frame" x="16" y="138" width="288" height="120"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lunch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LxL-zh-eD3">
                                         <rect key="frame" x="16" y="16" width="79" height="29"/>
@@ -626,10 +626,10 @@
                                     <constraint firstAttribute="height" constant="42" id="32B-vQ-azy"/>
                                     <constraint firstAttribute="width" constant="237" id="QOW-CZ-XOV"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="NewsCycle-Bold" family="News Cycle" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="NewsCycle-Bold" family="News Cycle" pointSize="17"/>
                                 <inset key="contentEdgeInsets" minX="0.0" minY="-5" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="I'll drive myself">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Get Directions on GoogleMaps">
+                                    <color key="titleColor" red="0.28235294117647058" green="0.52156862745098043" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -674,7 +674,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="paq-sF-8wn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2611.594202898551" y="1019.8369565217392"/>
+            <point key="canvasLocation" x="2610" y="1019.3661971830986"/>
         </scene>
         <!--Self Drive Controller-->
         <scene sceneID="dho-oH-C7c">
@@ -768,7 +768,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bie-Vp-okh">
-                                <rect key="frame" x="143.5" y="157" width="33.5" height="28"/>
+                                <rect key="frame" x="144" y="157" width="33.5" height="28"/>
                                 <fontDescription key="fontDescription" name="NewsCycle-Bold" family="News Cycle" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
