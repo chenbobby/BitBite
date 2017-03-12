@@ -19,6 +19,9 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var dinnerView: UIView!
     @IBOutlet weak var dinnerFriendView: UIView!
     @IBOutlet weak var dinnerHistoryView: UIView!
+    @IBOutlet weak var barsView: UIView!
+    @IBOutlet weak var barsFriendView: UIView!
+    @IBOutlet weak var barsHistoryView: UIView!
     
     var userRef: FIRDatabaseReference?
     
@@ -50,7 +53,9 @@ class HomeViewController: UIViewController {
         dinnerView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.tapDinner(_:))))
         dinnerFriendView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.tapDinnerFriends(_:))))
         dinnerHistoryView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.tapDinnerHistory(_:))))
-        
+        barsView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.tapBars(_:))))
+        barsFriendView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.tapBarsFriends(_:))))
+        barsHistoryView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.tapBarsHistory(_:))))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -123,6 +128,18 @@ class HomeViewController: UIViewController {
         print("tapped dinner history")
     }
     
+    func tapBars(_ sender: UITapGestureRecognizer) {
+        print("tapped bars")
+    }
+    
+    func tapBarsFriends(_ sender: UITapGestureRecognizer) {
+        print("tapped bars friends")
+    }
+    
+    func tapBarsHistory(_ sender: UITapGestureRecognizer) {
+        print("tapped bars history")
+    }
+    
     //return single string to be queried on maps view
     func formatQuery() -> String {
         var formattedQuery = [String]()
@@ -172,6 +189,9 @@ class HomeViewController: UIViewController {
         if segue.identifier == "toMapSearch" {
             let destination = segue.destination as! MapsViewController
             destination.query = self.formatQuery()
+        } else if segue.identifier == "toMapSearchBars" {
+            let destination = segue.destination as! MapsViewController
+            destination.query = "bars clubs"
         }
     }
 
