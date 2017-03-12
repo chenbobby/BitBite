@@ -20,9 +20,9 @@ class SetupFinalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //updateAccount()
+        updateAccount()
         print("done finishing")
-        self.performSegue(withIdentifier: "unwind", sender: self)
+        self.performSegue(withIdentifier: "go", sender: self)
         
     }
     
