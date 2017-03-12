@@ -9,11 +9,12 @@
 import UIKit
 import UberRides
 import CoreLocation
-import FirebaseAuth
-import FirebaseDatabase
 
 class Transportation: UIViewController {
    
+    @IBOutlet weak var lat: UILabel!
+ 
+    @IBOutlet weak var long: UILabel!
     @IBOutlet weak var name: UILabel!
     
     @IBOutlet weak var phoneNumber: UILabel!
@@ -25,16 +26,7 @@ class Transportation: UIViewController {
     var nameOf: String?
     var phoneNumberOf: String?
     
-    var meal: String?
-    var category: String?
     
-    
-    @IBAction func saveToHistoryButton(_ sender: Any) {
-        print(self.meal)
-        print(self.category)
-        //performSegue(withIdentifier: "saveToHistory", sender: self)
-    }
-
     
     @IBAction func driveMyselfPressed(_ sender: Any) {
         let testURL = URL(string: "comgooglemaps-x-callback://")!
@@ -79,12 +71,6 @@ class Transportation: UIViewController {
         
         //put the button in the view
         view.addSubview(button)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "saveToHistory" {
-            
-        }
     }
     
 }

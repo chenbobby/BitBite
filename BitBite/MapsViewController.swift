@@ -13,7 +13,7 @@ import MapKit
 
 class MapsViewController: UIViewController, CLLocationManagerDelegate, UITableViewDataSource, UITableViewDelegate {
     
-    @IBOutlet weak var queryLabel: UILabel!
+    @IBOutlet weak var titleLabel: UINavigationItem!
     var manager = CLLocationManager()
     var updateCount = 0
     var restaurantItems = [RestaurantItem]()
@@ -27,8 +27,6 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, UITableVi
     var phoneNumber = String()
     
     var query: String?
-    var meal: String?
-    var category: String?
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -42,17 +40,14 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, UITableVi
         )
     }
     
-    @IBAction func mapsBackButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
     
     // viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.queryLabel.text = self.query
         manager.delegate = self
         tableView.dataSource = self
         tableView.delegate = self
+        self.titleLabel.title = self.query
         self.tableView.backgroundColor = UIColorFromRGB(rgbValue: 0x119E98)
         
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse{
@@ -129,8 +124,6 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, UITableVi
         destination.longitude = longitude
         destination.nameOf = name
         destination.phoneNumberOf = phoneNumber
-        destination.meal = self.meal
-        destination.category = self.category
     }
     
     //recenter button pressed

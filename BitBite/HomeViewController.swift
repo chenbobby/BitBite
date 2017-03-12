@@ -26,8 +26,6 @@ class HomeViewController: UIViewController {
     var userRef: FIRDatabaseReference?
     
     var query = [String]()
-    var meal = String()
-    var category = String()
     
     @IBAction func logoutButton(_ sender: Any) {
         try! FIRAuth.auth()?.signOut()
@@ -89,7 +87,6 @@ class HomeViewController: UIViewController {
     //randomly choose from lunch preferences into query[]
     func tapLunch(_ sender: UITapGestureRecognizer) {
         self.resetQueryWithMisc()
-        self.meal = "lunch"
         
         self.userRef?.child("lunch").observeSingleEvent(of: .value, with: { (snapshot) in
             let snapshotValue = snapshot.value as? [String : Int]
@@ -102,8 +99,7 @@ class HomeViewController: UIViewController {
                     }
                 }
             }
-            self.category = cumulative[self.randRange(lower: 0, upper: (cumulative.count-1))]
-            self.query.append(self.category)
+            self.query.append(cumulative[self.randRange(lower: 0, upper: (cumulative.count-1))])
             self.performSegue(withIdentifier: "toMapSearch", sender: self)
             
         }) { (error) in
@@ -134,7 +130,6 @@ class HomeViewController: UIViewController {
     
     func tapBars(_ sender: UITapGestureRecognizer) {
         print("tapped bars")
-        self.performSegue(withIdentifier: "toMapSearchBars", sender: self)
     }
     
     func tapBarsFriends(_ sender: UITapGestureRecognizer) {
@@ -192,17 +187,11 @@ class HomeViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toMapSearch" {
-            print("preparing")
             let destination = segue.destination as! MapsViewController
             destination.query = self.formatQuery()
-            destination.meal = self.meal
-            destination.category = self.category
         } else if segue.identifier == "toMapSearchBars" {
             let destination = segue.destination as! MapsViewController
             destination.query = "bars clubs"
-            destination.meal = "bars"
-            destination.category = "bars"
-            
         }
     }
 
