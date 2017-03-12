@@ -53,6 +53,7 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         errorLabel.text = "Let's make an account"
+        self.hideKeyboardWhenTappedAround()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
