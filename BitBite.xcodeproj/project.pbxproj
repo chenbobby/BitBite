@@ -15,14 +15,16 @@
 		28C442EF1E73B2F8008553E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28C442EE1E73B2F8008553E8 /* GoogleService-Info.plist */; };
 		28C442F11E73DB95008553E8 /* SetupNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C442F01E73DB95008553E8 /* SetupNameViewController.swift */; };
 		28C442F61E746899008553E8 /* SetupLunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C442F51E746899008553E8 /* SetupLunchViewController.swift */; };
-		28C442F81E748520008553E8 /* SetupDinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C442F71E748520008553E8 /* SetupDinnerViewController.swift */; };
 		28C442FA1E748C2C008553E8 /* SetupMiscViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C442F91E748C2C008553E8 /* SetupMiscViewController.swift */; };
 		28C442FC1E749C3D008553E8 /* SetupFinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C442FB1E749C3D008553E8 /* SetupFinalViewController.swift */; };
 		28C443021E74E6C7008553E8 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C443011E74E6C7008553E8 /* MenuViewController.swift */; };
+		4C0872771E74DE2200C43116 /* Transportation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0872761E74DE2200C43116 /* Transportation.swift */; };
+		4C0872791E75104900C43116 /* SelfDriveController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0872781E75104900C43116 /* SelfDriveController.swift */; };
 		4CD09CC41E73AB7B00AA259D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD09CC31E73AB7B00AA259D /* RegisterViewController.swift */; };
 		4CD09CC61E73B87100AA259D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD09CC51E73B87000AA259D /* HomeViewController.swift */; };
 		4CD09CCA1E73C45000AA259D /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD09CC91E73C45000AA259D /* MapsViewController.swift */; };
 		4CD09CCC1E73DC2600AA259D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD09CCB1E73DC2600AA259D /* MapKit.framework */; };
+		4CD09CCE1E74703C00AA259D /* RestaurantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD09CCD1E74703C00AA259D /* RestaurantModel.swift */; };
 		F96741D37822F33F2D0C110B /* Pods_BitBite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB845FF79BBD4D7B0394A5A /* Pods_BitBite.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,10 +43,13 @@
 		28C442F91E748C2C008553E8 /* SetupMiscViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupMiscViewController.swift; sourceTree = "<group>"; };
 		28C442FB1E749C3D008553E8 /* SetupFinalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupFinalViewController.swift; sourceTree = "<group>"; };
 		28C443011E74E6C7008553E8 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		4C0872761E74DE2200C43116 /* Transportation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transportation.swift; sourceTree = "<group>"; };
+		4C0872781E75104900C43116 /* SelfDriveController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfDriveController.swift; sourceTree = "<group>"; };
 		4CD09CC31E73AB7B00AA259D /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		4CD09CC51E73B87000AA259D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4CD09CC91E73C45000AA259D /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		4CD09CCB1E73DC2600AA259D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4CD09CCD1E74703C00AA259D /* RestaurantModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantModel.swift; sourceTree = "<group>"; };
 		6CB845FF79BBD4D7B0394A5A /* Pods_BitBite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitBite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		876EC412B3D338015EFD84F5 /* Pods-BitBite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitBite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitBite/Pods-BitBite.debug.xcconfig"; sourceTree = "<group>"; };
 		CA868B0F78C88DD648E02F97 /* Pods-BitBite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitBite.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitBite/Pods-BitBite.release.xcconfig"; sourceTree = "<group>"; };
@@ -85,17 +90,21 @@
 			isa = PBXGroup;
 			children = (
 				28ADBB851E73A62D008BEB89 /* AppDelegate.swift */,
-				28ADBB871E73A62D008BEB89 /* LoginViewController.swift */,
 				4CD09CC31E73AB7B00AA259D /* RegisterViewController.swift */,
 				28C442F41E745EA0008553E8 /* SetupViewControllers */,
 				4CD09CC51E73B87000AA259D /* HomeViewController.swift */,
 				28C443011E74E6C7008553E8 /* MenuViewController.swift */,
+				28ADBB871E73A62D008BEB89 /* LoginViewController.swift */,
+				28C442F01E73DB95008553E8 /* SetupNameViewController.swift */,
+				4C0872781E75104900C43116 /* SelfDriveController.swift */,
+				4CD09CCD1E74703C00AA259D /* RestaurantModel.swift */,
 				28ADBB891E73A62D008BEB89 /* Main.storyboard */,
 				28ADBB8C1E73A62D008BEB89 /* Assets.xcassets */,
 				28ADBB8E1E73A62D008BEB89 /* LaunchScreen.storyboard */,
 				28ADBB911E73A62D008BEB89 /* Info.plist */,
 				28C442EE1E73B2F8008553E8 /* GoogleService-Info.plist */,
 				4CD09CC91E73C45000AA259D /* MapsViewController.swift */,
+				4C0872761E74DE2200C43116 /* Transportation.swift */,
 			);
 			path = BitBite;
 			sourceTree = "<group>";
@@ -103,7 +112,6 @@
 		28C442F41E745EA0008553E8 /* SetupViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				28C442F01E73DB95008553E8 /* SetupNameViewController.swift */,
 				28C442F51E746899008553E8 /* SetupLunchViewController.swift */,
 				28C442F71E748520008553E8 /* SetupDinnerViewController.swift */,
 				28C442F91E748C2C008553E8 /* SetupMiscViewController.swift */,
@@ -165,7 +173,7 @@
 				TargetAttributes = {
 					28ADBB811E73A62D008BEB89 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = B4KEJB9JE8;
+						DevelopmentTeam = YY9Z752ABD;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -257,7 +265,9 @@
 			files = (
 				4CD09CCA1E73C45000AA259D /* MapsViewController.swift in Sources */,
 				4CD09CC41E73AB7B00AA259D /* RegisterViewController.swift in Sources */,
-				28C442F81E748520008553E8 /* SetupDinnerViewController.swift in Sources */,
+				4C0872771E74DE2200C43116 /* Transportation.swift in Sources */,
+				4CD09CCE1E74703C00AA259D /* RestaurantModel.swift in Sources */,
+				4C0872791E75104900C43116 /* SelfDriveController.swift in Sources */,
 				28ADBB881E73A62D008BEB89 /* LoginViewController.swift in Sources */,
 				28C443021E74E6C7008553E8 /* MenuViewController.swift in Sources */,
 				28C442F61E746899008553E8 /* SetupLunchViewController.swift in Sources */,
@@ -387,7 +397,7 @@
 			baseConfigurationReference = 876EC412B3D338015EFD84F5 /* Pods-BitBite.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = B4KEJB9JE8;
+				DEVELOPMENT_TEAM = YY9Z752ABD;
 				INFOPLIST_FILE = BitBite/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BMS.BitBite;
@@ -401,7 +411,7 @@
 			baseConfigurationReference = CA868B0F78C88DD648E02F97 /* Pods-BitBite.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = B4KEJB9JE8;
+				DEVELOPMENT_TEAM = YY9Z752ABD;
 				INFOPLIST_FILE = BitBite/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BMS.BitBite;

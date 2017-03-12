@@ -57,12 +57,12 @@ class SetupLunchViewController: UIViewController {
     
     //send data to next view controller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "lunchToDinner" {
-            let destination = segue.destination as! SetupDinnerViewController
-            destination.uid = uid
-            destination.name = self.name
-            destination.lunchPref = lunchPref
-        }
+//        if segue.identifier == "lunchToDinner" {
+//            let destination = segue.destination as! SetupDinnerViewController
+//            destination.uid = uid
+//            destination.name = self.name
+//            destination.lunchPref = lunchPref
+//        }
 
     }
 }
