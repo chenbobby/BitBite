@@ -10,6 +10,7 @@
 import UIKit
 import MapKit
 
+
 class MapsViewController: UIViewController, CLLocationManagerDelegate, UITableViewDataSource, UITableViewDelegate {
     
     var manager = CLLocationManager()
@@ -18,6 +19,12 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, UITableVi
     let cellIdentifier = "MapViewCell"
     var testArray = [String]()
     var count = 0
+    
+    var latitude = String()
+    var longitude = String()
+    var name = String()
+    var phoneNumber = String()
+    
     @IBOutlet weak var mapView: MKMapView!
     
     @IBOutlet weak var mapItem: UILabel!
@@ -41,6 +48,8 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, UITableVi
         
         
     }
+    
+    
     
     //update location
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -77,10 +86,10 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, UITableVi
                     
                     print("Name = \(item.name)")
                     print("Phone = \(item.phoneNumber)")
-                    
-                        self.testArray.append(String(item.name!))
+                    print("Latitude = \(item.placemark.coordinate.latitude)")
+                    self.testArray.append(String(item.name!))
                     self.tableView.reloadData()
-                    
+                    self.restaurantItems.append(RestaurantItem(title: item.name!, phoneNumber: item.phoneNumber, latitude: String(item.placemark.coordinate.latitude), longitude: String(item.placemark.coordinate.longitude)))
                     
                     
                     //add the annotations to map
@@ -95,7 +104,13 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, UITableVi
         })
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as! Transportation
+        destination.latitude = latitude
+        destination.longitude = longitude
+        destination.nameOf = name
+        destination.phoneNumberOf = phoneNumber
+    }
     
     //recenter button pressed
     @IBAction func recenterButtonPressed(_ sender: Any) {
@@ -119,12 +134,23 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, UITableVi
 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = testArray[indexPath.row]
-//        let restaurant = restaurantItems[indexPath.row]
-//        cell.textLabel?.text = restaurant.title
+       let cell = UITableViewCell()
+//        cell.textLabel?.text = testArray[indexPath.row]
+       let restaurant = restaurantItems[indexPath.row]
+       cell.textLabel?.text = restaurant.title
         
         return cell
         }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        latitude = restaurantItems[indexPath.row].latitude
+        longitude = restaurantItems[indexPath.row].longitude
+        name = restaurantItems[indexPath.row].title
+        phoneNumber = restaurantItems[indexPath.row].phoneNumber
+        performSegue(withIdentifier: "goToTransportation", sender: self)
+    }
+    
+
         
 }
