@@ -15,6 +15,7 @@ import FirebaseDatabase
 class Transportation: UIViewController {
    
     @IBOutlet weak var name: UILabel!
+    
     @IBOutlet weak var phoneNumber: UILabel!
     
     var coordinatesString: String?
@@ -57,8 +58,6 @@ class Transportation: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        self.lat.text = latitude
-//        self.long.text = longitude
         
         self.name.text = nameOf
         self.phoneNumber.text = phoneNumberOf

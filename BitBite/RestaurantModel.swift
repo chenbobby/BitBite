@@ -11,12 +11,12 @@ import UIKit
 class RestaurantItem {
     
     var title: String!
-    var phoneNumber: String!
+    var phoneNumber: String?
     var latitude: String!
     var longitude: String!
 
     
-    init(title: String, phoneNumber: String?, latitude: String!, longitude: String!) {
+    init(title: String, phoneNumber: String?, latitude: String, longitude: String) {
         
         self.title = title
         self.phoneNumber = phoneNumber
