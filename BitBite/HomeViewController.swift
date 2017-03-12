@@ -12,6 +12,7 @@ import FirebaseDatabase
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var lunchView: UIView!
     @IBOutlet weak var lunchFriendView: UIView!
     @IBOutlet weak var lunchHistoryView: UIView!
@@ -32,6 +33,16 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         self.userRef = FIRDatabase.database().reference().child("users/" + (FIRAuth.auth()?.currentUser?.uid)!)
+        
+        self.userRef?.child("name").observeSingleEvent(of: .value, with: { (snapshot) in
+            if let snapshotValue = snapshot.value as? String {
+                self.nameLabel.text = snapshotValue
+            }
+            
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+            
         
         lunchView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.tapLunch(_:))))
         lunchFriendView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.tapLunchFriends(_:))))
