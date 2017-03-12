@@ -535,7 +535,7 @@
                                 <rect key="frame" x="243" y="72" width="62" height="30"/>
                                 <state key="normal" title="Recenter"/>
                                 <connections>
-                                    <action selector="recenterButtonPressed:" destination="7PT-Wt-jZF" eventType="touchUpInside" id="rYx-w7-qIX"/>
+                                    <action selector="centerButtonPressed:" destination="7PT-Wt-jZF" eventType="touchUpInside" id="vzW-WT-9B5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -548,9 +548,9 @@
                             <constraint firstItem="iDN-4p-Man" firstAttribute="leading" secondItem="z4o-Ak-Edc" secondAttribute="leadingMargin" constant="-16" id="HHZ-Cc-9V4"/>
                             <constraint firstItem="0pm-VV-Xc1" firstAttribute="leading" secondItem="z4o-Ak-Edc" secondAttribute="leadingMargin" constant="-16" id="J1u-Zl-JbJ"/>
                             <constraint firstItem="Yje-kK-gtq" firstAttribute="leading" secondItem="z4o-Ak-Edc" secondAttribute="leadingMargin" constant="-16" id="Q2S-Kv-7SQ"/>
-                            <constraint firstItem="4uR-jn-KGl" firstAttribute="leading" secondItem="0pm-VV-Xc1" secondAttribute="trailing" constant="-132" id="Txl-w0-Ibf"/>
+                            <constraint firstItem="rCV-S0-gFL" firstAttribute="top" secondItem="Yje-kK-gtq" secondAttribute="bottom" id="X4L-2n-1NC"/>
+                            <constraint firstItem="rCV-S0-gFL" firstAttribute="leading" secondItem="0pm-VV-Xc1" secondAttribute="trailing" constant="-50" id="gYG-U6-meW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iDN-4p-Man" secondAttribute="trailing" constant="-18" id="mZM-gI-Fnk"/>
-                            <constraint firstItem="4uR-jn-KGl" firstAttribute="top" secondItem="Yje-kK-gtq" secondAttribute="bottom" id="qdd-W4-21C"/>
                             <constraint firstItem="Yje-kK-gtq" firstAttribute="top" secondItem="2et-Df-eU2" secondAttribute="bottom" constant="8" id="sWz-WD-VFX"/>
                             <constraint firstItem="iWN-M0-NVO" firstAttribute="top" secondItem="iDN-4p-Man" secondAttribute="bottom" id="xot-8B-5xv"/>
                         </constraints>
@@ -564,7 +564,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RNz-9C-wf2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1790" y="1002"/>
+            <point key="canvasLocation" x="1789.8550724637682" y="1001.9021739130436"/>
         </scene>
         <!--Transportation-->
         <scene sceneID="mf3-WK-bOy">
@@ -628,23 +628,36 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4j-Bd-GeX">
-                                <rect key="frame" x="136" y="462" width="102" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="I'll drive myself"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PU9-Ex-0HD">
+                                <rect key="frame" x="82" y="450" width="251" height="40"/>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.10980392160000001" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="32B-vQ-azy"/>
+                                    <constraint firstAttribute="width" constant="100" id="QOW-CZ-XOV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NewsCycle-Bold" family="News Cycle" pointSize="20"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-5" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="I'll drive myself">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="driveMyselfPressed:" destination="dGq-C3-w4l" eventType="touchUpInside" id="ooT-2Q-z7Y"/>
+                                    <action selector="registerButton:" destination="TFS-BS-zZR" eventType="touchUpInside" id="w0b-a4-p5N"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQk-Qk-Ypx">
-                                <rect key="frame" x="175" y="410" width="24" height="21"/>
+                                <rect key="frame" x="188" y="383" width="39" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.066666666669999999" green="0.61960784310000006" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="lat" destination="xQt-vb-Oup" id="hUd-TP-Htn"/>
@@ -655,7 +668,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="paq-sF-8wn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2612" y="1020.5397301349326"/>
+            <point key="canvasLocation" x="2611.594202898551" y="1019.8369565217392"/>
         </scene>
         <!--Self Drive Controller-->
         <scene sceneID="dho-oH-C7c">
@@ -1871,6 +1884,7 @@
     <resources>
         <image name="bb" width="184" height="126"/>
         <image name="pot" width="265" height="122"/>
+        <image name="center" width="50" height="50"/>
         <image name="white friends" width="100" height="100"/>
         <image name="white history" width="100" height="100"/>
         <image name="white left" width="100" height="100"/>
