@@ -18,8 +18,6 @@
 		28C442FA1E748C2C008553E8 /* SetupMiscViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C442F91E748C2C008553E8 /* SetupMiscViewController.swift */; };
 		28C442FC1E749C3D008553E8 /* SetupFinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C442FB1E749C3D008553E8 /* SetupFinalViewController.swift */; };
 		28C443021E74E6C7008553E8 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C443011E74E6C7008553E8 /* MenuViewController.swift */; };
-		28E37EFA1E7523CC00C5C24B /* NewsCycle-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 28E37EF81E7523CC00C5C24B /* NewsCycle-Bold.ttf */; };
-		28E37EFB1E7523CC00C5C24B /* NewsCycle-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 28E37EF91E7523CC00C5C24B /* NewsCycle-Regular.ttf */; };
 		4C0872771E74DE2200C43116 /* Transportation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0872761E74DE2200C43116 /* Transportation.swift */; };
 		4C0872791E75104900C43116 /* SelfDriveController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0872781E75104900C43116 /* SelfDriveController.swift */; };
 		4CD09CC41E73AB7B00AA259D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD09CC31E73AB7B00AA259D /* RegisterViewController.swift */; };
@@ -27,6 +25,7 @@
 		4CD09CCA1E73C45000AA259D /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD09CC91E73C45000AA259D /* MapsViewController.swift */; };
 		4CD09CCC1E73DC2600AA259D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD09CCB1E73DC2600AA259D /* MapKit.framework */; };
 		4CD09CCE1E74703C00AA259D /* RestaurantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD09CCD1E74703C00AA259D /* RestaurantModel.swift */; };
+		4CD8BACD1E75306E000837C6 /* GoogleMapsTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8BACC1E75306E000837C6 /* GoogleMapsTestViewController.swift */; };
 		F96741D37822F33F2D0C110B /* Pods_BitBite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB845FF79BBD4D7B0394A5A /* Pods_BitBite.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,8 +44,6 @@
 		28C442F91E748C2C008553E8 /* SetupMiscViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupMiscViewController.swift; sourceTree = "<group>"; };
 		28C442FB1E749C3D008553E8 /* SetupFinalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupFinalViewController.swift; sourceTree = "<group>"; };
 		28C443011E74E6C7008553E8 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		28E37EF81E7523CC00C5C24B /* NewsCycle-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NewsCycle-Bold.ttf"; path = "../../../Downloads/News_Cycle/NewsCycle-Bold.ttf"; sourceTree = "<group>"; };
-		28E37EF91E7523CC00C5C24B /* NewsCycle-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NewsCycle-Regular.ttf"; path = "../../../Downloads/News_Cycle/NewsCycle-Regular.ttf"; sourceTree = "<group>"; };
 		4C0872761E74DE2200C43116 /* Transportation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transportation.swift; sourceTree = "<group>"; };
 		4C0872781E75104900C43116 /* SelfDriveController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfDriveController.swift; sourceTree = "<group>"; };
 		4CD09CC31E73AB7B00AA259D /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +51,9 @@
 		4CD09CC91E73C45000AA259D /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		4CD09CCB1E73DC2600AA259D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		4CD09CCD1E74703C00AA259D /* RestaurantModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantModel.swift; sourceTree = "<group>"; };
+		4CD8BACA1E752E66000837C6 /* NewsCycle-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NewsCycle-Bold.ttf"; path = "../../../Downloads/NewsCycle-Bold.ttf"; sourceTree = "<group>"; };
+		4CD8BACB1E752E7D000837C6 /* NewsCycle-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NewsCycle-Regular.ttf"; path = "../../../Downloads/NewsCycle-Regular.ttf"; sourceTree = "<group>"; };
+		4CD8BACC1E75306E000837C6 /* GoogleMapsTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleMapsTestViewController.swift; sourceTree = "<group>"; };
 		6CB845FF79BBD4D7B0394A5A /* Pods_BitBite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitBite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		876EC412B3D338015EFD84F5 /* Pods-BitBite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitBite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitBite/Pods-BitBite.debug.xcconfig"; sourceTree = "<group>"; };
 		CA868B0F78C88DD648E02F97 /* Pods-BitBite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitBite.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitBite/Pods-BitBite.release.xcconfig"; sourceTree = "<group>"; };
@@ -103,6 +103,7 @@
 				4C0872781E75104900C43116 /* SelfDriveController.swift */,
 				4CD09CCD1E74703C00AA259D /* RestaurantModel.swift */,
 				28ADBB891E73A62D008BEB89 /* Main.storyboard */,
+				4CD8BACC1E75306E000837C6 /* GoogleMapsTestViewController.swift */,
 				28ADBB8C1E73A62D008BEB89 /* Assets.xcassets */,
 				28ADBB8E1E73A62D008BEB89 /* LaunchScreen.storyboard */,
 				28ADBB911E73A62D008BEB89 /* Info.plist */,
@@ -128,8 +129,8 @@
 		28E37EFC1E7523E100C5C24B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				28E37EF81E7523CC00C5C24B /* NewsCycle-Bold.ttf */,
-				28E37EF91E7523CC00C5C24B /* NewsCycle-Regular.ttf */,
+				4CD8BACA1E752E66000837C6 /* NewsCycle-Bold.ttf */,
+				4CD8BACB1E752E7D000837C6 /* NewsCycle-Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -218,9 +219,7 @@
 				28ADBB901E73A62D008BEB89 /* LaunchScreen.storyboard in Resources */,
 				28C442EF1E73B2F8008553E8 /* GoogleService-Info.plist in Resources */,
 				28ADBB8D1E73A62D008BEB89 /* Assets.xcassets in Resources */,
-				28E37EFB1E7523CC00C5C24B /* NewsCycle-Regular.ttf in Resources */,
 				28ADBB8B1E73A62D008BEB89 /* Main.storyboard in Resources */,
-				28E37EFA1E7523CC00C5C24B /* NewsCycle-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +286,7 @@
 				28ADBB881E73A62D008BEB89 /* LoginViewController.swift in Sources */,
 				28C443021E74E6C7008553E8 /* MenuViewController.swift in Sources */,
 				28C442F61E746899008553E8 /* SetupLunchViewController.swift in Sources */,
+				4CD8BACD1E75306E000837C6 /* GoogleMapsTestViewController.swift in Sources */,
 				28C442FA1E748C2C008553E8 /* SetupMiscViewController.swift in Sources */,
 				28ADBB861E73A62D008BEB89 /* AppDelegate.swift in Sources */,
 				4CD09CC61E73B87100AA259D /* HomeViewController.swift in Sources */,

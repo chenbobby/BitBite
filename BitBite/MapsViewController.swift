@@ -31,6 +31,15 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, UITableVi
     @IBOutlet weak var mapView: MKMapView!
     
     @IBOutlet weak var mapItem: UILabel!
+    func UIColorFromRGB(rgbValue: UInt) -> UIColor {
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
+    }
+    
     
     // viewDidLoad
     override func viewDidLoad() {
@@ -39,7 +48,7 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, UITableVi
         tableView.dataSource = self
         tableView.delegate = self
         self.titleLabel.title = self.query
-        
+        self.tableView.backgroundColor = UIColorFromRGB(rgbValue: 0x119E98)
         
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse{
             print("Ready")
@@ -117,11 +126,11 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, UITableVi
     }
     
     //recenter button pressed
-    @IBAction func recenterButtonPressed(_ sender: Any) {
+    @IBAction func centerButtonPressed(_ sender: Any) {
         if let coord = manager.location?.coordinate{
-        let region = MKCoordinateRegionMakeWithDistance(coord, 3000, 3000)
-        mapView.setRegion(region, animated: false)
-        print("Recenter Location")
+            let region = MKCoordinateRegionMakeWithDistance(coord, 3000, 3000)
+            mapView.setRegion(region, animated: false)
+            print("Recenter Location")
         }
     }
     
@@ -142,7 +151,8 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, UITableVi
 //        cell.textLabel?.text = testArray[indexPath.row]
        let restaurant = restaurantItems[indexPath.row]
        cell.textLabel?.text = restaurant.title
-        
+        cell.textLabel?.textColor = UIColor.white
+        cell.backgroundColor = UIColor.clear
         return cell
         }
     

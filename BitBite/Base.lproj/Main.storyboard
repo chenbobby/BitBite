@@ -31,19 +31,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FA6-I4-NyI">
-                                <rect key="frame" x="14" y="265" width="380" height="30"/>
+                                <rect key="frame" x="14" y="261" width="380" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uyw-6s-Jbv">
-                                <rect key="frame" x="14" y="314" width="380" height="30"/>
+                                <rect key="frame" x="14" y="310" width="380" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eem-JF-lhQ">
-                                <rect key="frame" x="185.66666666666666" y="352" width="43" height="32"/>
+                                <rect key="frame" x="188.66666666666666" y="348" width="37" height="40"/>
                                 <fontDescription key="fontDescription" name="NewsCycle-Bold" family="News Cycle" pointSize="17"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -62,7 +62,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QFB-FU-7Cf">
-                                <rect key="frame" x="188.66666666666666" y="237" width="37" height="20"/>
+                                <rect key="frame" x="191" y="225" width="33.333333333333343" height="28"/>
                                 <fontDescription key="fontDescription" name="NewsCycle-Bold" family="News Cycle" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -363,7 +363,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iDN-4p-Man">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iDN-4p-Man">
                                 <rect key="frame" x="4" y="472" width="408" height="264"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -375,15 +375,19 @@
                             </mapView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yje-kK-gtq">
                                 <rect key="frame" x="4" y="28" width="406" height="44"/>
+                                <color key="barTintColor" red="0.066666666669999999" green="0.61960784310000006" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Title" id="ggI-7q-aKg"/>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4uR-jn-KGl">
-                                <rect key="frame" x="278" y="72" width="62" height="30"/>
-                                <state key="normal" title="Recenter"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rCV-S0-gFL">
+                                <rect key="frame" x="360" y="72" width="50" height="62"/>
+                                <state key="normal" image="center"/>
                                 <connections>
-                                    <action selector="recenterButtonPressed:" destination="7PT-Wt-jZF" eventType="touchUpInside" id="rYx-w7-qIX"/>
+                                    <action selector="centerButtonPressed:" destination="7PT-Wt-jZF" eventType="touchUpInside" id="vzW-WT-9B5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -396,9 +400,9 @@
                             <constraint firstItem="iDN-4p-Man" firstAttribute="leading" secondItem="z4o-Ak-Edc" secondAttribute="leadingMargin" constant="-16" id="HHZ-Cc-9V4"/>
                             <constraint firstItem="0pm-VV-Xc1" firstAttribute="leading" secondItem="z4o-Ak-Edc" secondAttribute="leadingMargin" constant="-16" id="J1u-Zl-JbJ"/>
                             <constraint firstItem="Yje-kK-gtq" firstAttribute="leading" secondItem="z4o-Ak-Edc" secondAttribute="leadingMargin" constant="-16" id="Q2S-Kv-7SQ"/>
-                            <constraint firstItem="4uR-jn-KGl" firstAttribute="leading" secondItem="0pm-VV-Xc1" secondAttribute="trailing" constant="-132" id="Txl-w0-Ibf"/>
+                            <constraint firstItem="rCV-S0-gFL" firstAttribute="top" secondItem="Yje-kK-gtq" secondAttribute="bottom" id="X4L-2n-1NC"/>
+                            <constraint firstItem="rCV-S0-gFL" firstAttribute="leading" secondItem="0pm-VV-Xc1" secondAttribute="trailing" constant="-50" id="gYG-U6-meW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iDN-4p-Man" secondAttribute="trailing" constant="-18" id="mZM-gI-Fnk"/>
-                            <constraint firstItem="4uR-jn-KGl" firstAttribute="top" secondItem="Yje-kK-gtq" secondAttribute="bottom" id="qdd-W4-21C"/>
                             <constraint firstItem="Yje-kK-gtq" firstAttribute="top" secondItem="2et-Df-eU2" secondAttribute="bottom" constant="8" id="sWz-WD-VFX"/>
                             <constraint firstItem="iWN-M0-NVO" firstAttribute="top" secondItem="iDN-4p-Man" secondAttribute="bottom" id="xot-8B-5xv"/>
                         </constraints>
@@ -412,7 +416,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RNz-9C-wf2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1790" y="1002"/>
+            <point key="canvasLocation" x="1789.8550724637682" y="1001.9021739130436"/>
         </scene>
         <!--Transportation-->
         <scene sceneID="mf3-WK-bOy">
@@ -476,23 +480,36 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4j-Bd-GeX">
-                                <rect key="frame" x="136" y="462" width="102" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="I'll drive myself"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PU9-Ex-0HD">
+                                <rect key="frame" x="82" y="450" width="251" height="40"/>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.10980392160000001" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="32B-vQ-azy"/>
+                                    <constraint firstAttribute="width" constant="100" id="QOW-CZ-XOV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NewsCycle-Bold" family="News Cycle" pointSize="20"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-5" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="I'll drive myself">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="driveMyselfPressed:" destination="dGq-C3-w4l" eventType="touchUpInside" id="ooT-2Q-z7Y"/>
+                                    <action selector="registerButton:" destination="TFS-BS-zZR" eventType="touchUpInside" id="w0b-a4-p5N"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQk-Qk-Ypx">
-                                <rect key="frame" x="175" y="410" width="24" height="21"/>
+                                <rect key="frame" x="188" y="383" width="39" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.066666666669999999" green="0.61960784310000006" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="lat" destination="xQt-vb-Oup" id="hUd-TP-Htn"/>
@@ -503,7 +520,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="paq-sF-8wn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2612" y="1020.5397301349326"/>
+            <point key="canvasLocation" x="2611.594202898551" y="1019.8369565217392"/>
         </scene>
         <!--Self Drive Controller-->
         <scene sceneID="dho-oH-C7c">
@@ -567,13 +584,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bie-Vp-okh">
-                                <rect key="frame" x="188.66666666666666" y="249" width="37" height="20"/>
+                                <rect key="frame" x="191" y="241" width="33.333333333333343" height="28"/>
                                 <fontDescription key="fontDescription" name="NewsCycle-Bold" family="News Cycle" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Join BitBite" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xzQ-RQ-Okt">
-                                <rect key="frame" x="94" y="177.66666666666663" width="226" height="51.333333333333343"/>
+                                <rect key="frame" x="108.66666666666669" y="148.33333333333337" width="196.66666666666663" height="72.666666666666657"/>
                                 <fontDescription key="fontDescription" name="NewsCycle-Bold" family="News Cycle" pointSize="44"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1426,6 +1443,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="center" width="50" height="50"/>
         <image name="white friends" width="100" height="100"/>
         <image name="white history" width="100" height="100"/>
         <image name="white left" width="100" height="100"/>
