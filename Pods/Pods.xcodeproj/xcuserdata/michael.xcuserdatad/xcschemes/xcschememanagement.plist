@@ -14,6 +14,11 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>M13Checkbox.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
 		<key>ObjectMapper.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -38,6 +43,16 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>107A9565F9DF88517DFD3E28C05B2B96</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1380A9A6A31A3AA7D8A7429F57A34A56</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>20A9DD9ABBF08BC57372A26C35327BF1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,7 +82,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>E73DAB64AA961C064789E8BF6DDD0EF3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>EEADEE8E3DE6AD998692A494DB5ED5F4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F7F7F494CB17418F91C2359A5F41A8FD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
