@@ -121,6 +121,7 @@
                                 <state key="normal" title="Lunch">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9xi-KC-wHL" userLabel="Menu Button">
                                 <rect key="frame" x="16" y="36" width="30" height="30"/>
                                 <constraints>
