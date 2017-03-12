@@ -59,6 +59,7 @@ class LoginViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         errorLabel.text = ""
+        passwordTextField.text = ""
     }
     
     override func viewDidAppear(_ animated: Bool) {
