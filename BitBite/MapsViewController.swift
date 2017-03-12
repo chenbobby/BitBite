@@ -161,7 +161,7 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, UITableVi
         latitude = restaurantItems[indexPath.row].latitude
         longitude = restaurantItems[indexPath.row].longitude
         name = restaurantItems[indexPath.row].title
-        phoneNumber = restaurantItems[indexPath.row].phoneNumber
+        //phoneNumber = restaurantItems[indexPath.row].phoneNumber
         performSegue(withIdentifier: "goToTransportation", sender: self)
     }
     
