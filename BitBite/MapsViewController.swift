@@ -13,7 +13,7 @@ import MapKit
 
 class MapsViewController: UIViewController, CLLocationManagerDelegate, UITableViewDataSource, UITableViewDelegate {
     
-    @IBOutlet weak var titleLabel: UINavigationItem!
+    @IBOutlet weak var queryLabel: UILabel!
     var manager = CLLocationManager()
     var updateCount = 0
     var restaurantItems = [RestaurantItem]()
@@ -40,6 +40,9 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, UITableVi
         )
     }
     
+    @IBAction func mapBackButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     // viewDidLoad
     override func viewDidLoad() {
@@ -47,7 +50,7 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, UITableVi
         manager.delegate = self
         tableView.dataSource = self
         tableView.delegate = self
-        self.titleLabel.title = self.query
+        self.queryLabel.text = self.query?.capitalized
         self.tableView.backgroundColor = UIColorFromRGB(rgbValue: 0x119E98)
         
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse{

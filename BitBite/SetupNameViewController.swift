@@ -34,7 +34,7 @@ class SetupNameViewController: UIViewController {
         } else {
             //no errors; proceed
             errorLabel.text = ""
-            performSegue(withIdentifier: "nameToLunch", sender: self)
+            performSegue(withIdentifier: "toLunch", sender: self)
         }
     }
     
@@ -51,7 +51,7 @@ class SetupNameViewController: UIViewController {
     
     //send data to next view controller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "nameToLunch" {
+        if segue.identifier == "toLunch" {
             let destination = segue.destination as! SetupLunchViewController
             destination.uid = uid
             destination.name = self.nameTextField.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)

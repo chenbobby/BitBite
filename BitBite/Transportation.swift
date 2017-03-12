@@ -16,6 +16,7 @@ class Transportation: UIViewController {
  
     @IBOutlet weak var long: UILabel!
     @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var saveButton: UIButton!
     
     @IBOutlet weak var phoneNumber: UILabel!
     
@@ -26,9 +27,15 @@ class Transportation: UIViewController {
     var nameOf: String?
     var phoneNumberOf: String?
     
+    @IBAction func saveHistoryButton(_ sender: Any) {
+        saveButton.setTitle("Saving...", for: .disabled)
+        saveButton.isEnabled = false
+        sleep(1)
+        saveButton.setTitle("Meal saved.", for: .disabled)
+        
+    }
     
-    
-    @IBAction func driveMyselfPressed(_ sender: Any) {
+    @IBAction func openGoogleMapsButton(_ sender: Any) {
         let testURL = URL(string: "comgooglemaps-x-callback://")!
         if UIApplication.shared.canOpenURL(testURL) {
             let directionsRequest = "comgooglemapsurl://maps.google.com/?q="  + self.coordinatesString! +
@@ -39,8 +46,6 @@ class Transportation: UIViewController {
         } else {
             NSLog("Can't use comgooglemaps-x-callback:// on this device.")
         }
-
-        
     }
     
     @IBAction func backButtonPressed(_ sender: Any) {

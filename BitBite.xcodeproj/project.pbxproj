@@ -19,6 +19,8 @@
 		28C442FC1E749C3D008553E8 /* SetupFinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C442FB1E749C3D008553E8 /* SetupFinalViewController.swift */; };
 		28C443021E74E6C7008553E8 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C443011E74E6C7008553E8 /* MenuViewController.swift */; };
 		28E37EFE1E753DB400C5C24B /* SetupDinnerViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E37EFD1E753DB400C5C24B /* SetupDinnerViewController2.swift */; };
+		28E37F091E7571C900C5C24B /* NewsCycle-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 28E37F071E7571C900C5C24B /* NewsCycle-Bold.ttf */; };
+		28E37F0A1E7571C900C5C24B /* NewsCycle-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 28E37F081E7571C900C5C24B /* NewsCycle-Regular.ttf */; };
 		4C0872771E74DE2200C43116 /* Transportation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0872761E74DE2200C43116 /* Transportation.swift */; };
 		4C0872791E75104900C43116 /* SelfDriveController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0872781E75104900C43116 /* SelfDriveController.swift */; };
 		4CD09CC41E73AB7B00AA259D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD09CC31E73AB7B00AA259D /* RegisterViewController.swift */; };
@@ -27,8 +29,6 @@
 		4CD09CCC1E73DC2600AA259D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD09CCB1E73DC2600AA259D /* MapKit.framework */; };
 		4CD09CCE1E74703C00AA259D /* RestaurantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD09CCD1E74703C00AA259D /* RestaurantModel.swift */; };
 		4CD8BACD1E75306E000837C6 /* GoogleMapsTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8BACC1E75306E000837C6 /* GoogleMapsTestViewController.swift */; };
-		4CD8BACF1E75606A000837C6 /* NewsCycle-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CD8BACE1E75606A000837C6 /* NewsCycle-Regular.ttf */; };
-		4CD8BAD11E756074000837C6 /* NewsCycle-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CD8BAD01E756074000837C6 /* NewsCycle-Bold.ttf */; };
 		F96741D37822F33F2D0C110B /* Pods_BitBite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB845FF79BBD4D7B0394A5A /* Pods_BitBite.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +48,8 @@
 		28C442FB1E749C3D008553E8 /* SetupFinalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupFinalViewController.swift; sourceTree = "<group>"; };
 		28C443011E74E6C7008553E8 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		28E37EFD1E753DB400C5C24B /* SetupDinnerViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupDinnerViewController2.swift; sourceTree = "<group>"; };
+		28E37F071E7571C900C5C24B /* NewsCycle-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NewsCycle-Bold.ttf"; path = "../../../Downloads/News_Cycle/NewsCycle-Bold.ttf"; sourceTree = "<group>"; };
+		28E37F081E7571C900C5C24B /* NewsCycle-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NewsCycle-Regular.ttf"; path = "../../../Downloads/News_Cycle/NewsCycle-Regular.ttf"; sourceTree = "<group>"; };
 		4C0872761E74DE2200C43116 /* Transportation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transportation.swift; sourceTree = "<group>"; };
 		4C0872781E75104900C43116 /* SelfDriveController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfDriveController.swift; sourceTree = "<group>"; };
 		4CD09CC31E73AB7B00AA259D /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -56,8 +58,6 @@
 		4CD09CCB1E73DC2600AA259D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		4CD09CCD1E74703C00AA259D /* RestaurantModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantModel.swift; sourceTree = "<group>"; };
 		4CD8BACC1E75306E000837C6 /* GoogleMapsTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleMapsTestViewController.swift; sourceTree = "<group>"; };
-		4CD8BACE1E75606A000837C6 /* NewsCycle-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NewsCycle-Regular.ttf"; path = "../../../Downloads/NewsCycle-Regular.ttf"; sourceTree = "<group>"; };
-		4CD8BAD01E756074000837C6 /* NewsCycle-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NewsCycle-Bold.ttf"; path = "../../../Downloads/NewsCycle-Bold.ttf"; sourceTree = "<group>"; };
 		6CB845FF79BBD4D7B0394A5A /* Pods_BitBite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitBite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		876EC412B3D338015EFD84F5 /* Pods-BitBite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitBite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitBite/Pods-BitBite.debug.xcconfig"; sourceTree = "<group>"; };
 		CA868B0F78C88DD648E02F97 /* Pods-BitBite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitBite.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitBite/Pods-BitBite.release.xcconfig"; sourceTree = "<group>"; };
@@ -134,8 +134,8 @@
 		28E37EFC1E7523E100C5C24B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				4CD8BAD01E756074000837C6 /* NewsCycle-Bold.ttf */,
-				4CD8BACE1E75606A000837C6 /* NewsCycle-Regular.ttf */,
+				28E37F071E7571C900C5C24B /* NewsCycle-Bold.ttf */,
+				28E37F081E7571C900C5C24B /* NewsCycle-Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -222,10 +222,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				28ADBB901E73A62D008BEB89 /* LaunchScreen.storyboard in Resources */,
-				4CD8BAD11E756074000837C6 /* NewsCycle-Bold.ttf in Resources */,
 				28C442EF1E73B2F8008553E8 /* GoogleService-Info.plist in Resources */,
 				28ADBB8D1E73A62D008BEB89 /* Assets.xcassets in Resources */,
-				4CD8BACF1E75606A000837C6 /* NewsCycle-Regular.ttf in Resources */,
+				28E37F091E7571C900C5C24B /* NewsCycle-Bold.ttf in Resources */,
+				28E37F0A1E7571C900C5C24B /* NewsCycle-Regular.ttf in Resources */,
 				28ADBB8B1E73A62D008BEB89 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

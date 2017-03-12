@@ -32,7 +32,7 @@ class LoginViewController: UIViewController {
         } else if (passwordTextField.text?.validate(rule: minLengthRule) != .valid) {
             errorLabel.text = "Oops! Please enter password"
         } else {
-            errorLabel.text = "Loggin in..."
+            errorLabel.text = "Logging in..."
             
             FIRAuth.auth()?.signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
                 if error == nil {

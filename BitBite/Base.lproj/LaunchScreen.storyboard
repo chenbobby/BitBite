@@ -21,18 +21,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pot" translatesAutoresizingMaskIntoConstraints="NO" id="lFj-zy-aSM">
-                                <rect key="frame" x="67" y="160" width="241" height="110"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pot" translatesAutoresizingMaskIntoConstraints="NO" id="05d-rN-HEv">
+                                <rect key="frame" x="127" y="130" width="120" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="110" id="E4G-Ey-Epv"/>
-                                    <constraint firstAttribute="width" constant="241" id="M2H-ke-RQe"/>
+                                    <constraint firstAttribute="height" constant="55" id="0V2-qO-VeI"/>
+                                    <constraint firstAttribute="width" constant="120" id="Fet-0D-yd7"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.066666666669999999" green="0.61960784310000006" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="lFj-zy-aSM" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="140" id="NoS-8u-169"/>
-                            <constraint firstItem="lFj-zy-aSM" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="exF-pS-wsy"/>
+                            <constraint firstItem="05d-rN-HEv" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="110" id="Sd2-xG-cE1"/>
+                            <constraint firstItem="05d-rN-HEv" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="aSk-Up-LJU"/>
                         </constraints>
                     </view>
                 </viewController>

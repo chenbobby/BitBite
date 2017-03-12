@@ -27,6 +27,7 @@ class SetupFinalViewController: UIViewController {
         
         updateAccount()
         print("done finishing")
+        sleep(2)
         self.performSegue(withIdentifier: "finishSetup", sender: self)
     }
     

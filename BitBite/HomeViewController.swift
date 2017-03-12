@@ -14,22 +14,24 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var lunchView: UIView!
-    @IBOutlet weak var lunchFriendView: UIView!
-    @IBOutlet weak var lunchHistoryView: UIView!
     @IBOutlet weak var dinnerView: UIView!
-    @IBOutlet weak var dinnerFriendView: UIView!
-    @IBOutlet weak var dinnerHistoryView: UIView!
     @IBOutlet weak var barsView: UIView!
-    @IBOutlet weak var barsFriendView: UIView!
-    @IBOutlet weak var barsHistoryView: UIView!
     
     var userRef: FIRDatabaseReference?
     
     var query = [String]()
     
     @IBAction func logoutButton(_ sender: Any) {
-        try! FIRAuth.auth()?.signOut()
-        self.dismiss(animated: true, completion: nil)
+        let alert = UIAlertController(title: "Logging out", message: "Are you sure you want to logout?", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Logout", style: UIAlertActionStyle.default, handler: { action in
+            if action.style == .default {
+            try! FIRAuth.auth()?.signOut()
+            self.dismiss(animated: true, completion: nil)
+            }
+        }))
+        self.present(alert, animated: true, completion: nil)
+        
     }
     
     override func viewDidLoad() {
@@ -48,14 +50,8 @@ class HomeViewController: UIViewController {
             
         
         lunchView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.tapLunch(_:))))
-        lunchFriendView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.tapLunchFriends(_:))))
-        lunchHistoryView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.tapLunchHistory(_:))))
         dinnerView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.tapDinner(_:))))
-        dinnerFriendView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.tapDinnerFriends(_:))))
-        dinnerHistoryView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.tapDinnerHistory(_:))))
         barsView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.tapBars(_:))))
-        barsFriendView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.tapBarsFriends(_:))))
-        barsHistoryView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.tapBarsHistory(_:))))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -108,36 +104,30 @@ class HomeViewController: UIViewController {
         
     }
     
-    func tapLunchFriends(_ sender: UITapGestureRecognizer) {
-        print("tapped lunch friends")
-    }
-    
-    func tapLunchHistory(_ sender: UITapGestureRecognizer) {
-        print("tapped lunch history")
-    }
-    
     func tapDinner(_ sender: UITapGestureRecognizer) {
-        print("tapped dinner")
-    }
-    
-    func tapDinnerFriends(_ sender: UITapGestureRecognizer) {
-        print("tapped dinner friends")
-    }
-    
-    func tapDinnerHistory(_ sender: UITapGestureRecognizer) {
-        print("tapped dinner history")
+        self.resetQueryWithMisc()
+        
+        self.userRef?.child("dinner").observeSingleEvent(of: .value, with: { (snapshot) in
+            let snapshotValue = snapshot.value as? [String : Int]
+            
+            var cumulative = [String]()
+            for (key, value) in snapshotValue! {
+                if value > 0 {
+                    for _ in 1...value {
+                        cumulative.append(key)
+                    }
+                }
+            }
+            self.query.append(cumulative[self.randRange(lower: 0, upper: (cumulative.count-1))])
+            self.performSegue(withIdentifier: "toMapSearch", sender: self)
+            
+        }) { (error) in
+            print(error.localizedDescription)
+        }
     }
     
     func tapBars(_ sender: UITapGestureRecognizer) {
-        print("tapped bars")
-    }
-    
-    func tapBarsFriends(_ sender: UITapGestureRecognizer) {
-        print("tapped bars friends")
-    }
-    
-    func tapBarsHistory(_ sender: UITapGestureRecognizer) {
-        print("tapped bars history")
+        performSegue(withIdentifier: "toBars", sender: self)
     }
     
     //return single string to be queried on maps view
@@ -147,25 +137,25 @@ class HomeViewController: UIViewController {
         for keyword in self.query {
             switch keyword {
             case "sandwich":
-                formattedQuery.append("sandwich")
+                formattedQuery.append("sandwiches")
                 break
             case "amer":
-                formattedQuery.append("fast")
+                formattedQuery.append("fast food")
                 break
             case "mex":
-                formattedQuery.append("mexican")
+                formattedQuery.append("mexican food")
                 break
             case "asian":
-                formattedQuery.append("chinese")
+                formattedQuery.append("chinese food")
                 break
             case "midEast":
-                formattedQuery.append("middle eastern")
+                formattedQuery.append("middle eastern food")
                 break
             case "italian":
-                formattedQuery.append("italian")
+                formattedQuery.append("italian food")
                 break
             case "steak":
-                formattedQuery.append("steak")
+                formattedQuery.append("steakhouses")
                 break
             case "vegetarian":
                 formattedQuery.append("vegetarian")
@@ -180,8 +170,6 @@ class HomeViewController: UIViewController {
                 break
             }
         }
-        
-        formattedQuery.append("food")
         return formattedQuery.joined(separator: " ")
     }
     
@@ -189,9 +177,9 @@ class HomeViewController: UIViewController {
         if segue.identifier == "toMapSearch" {
             let destination = segue.destination as! MapsViewController
             destination.query = self.formatQuery()
-        } else if segue.identifier == "toMapSearchBars" {
+        } else if segue.identifier == "toBars" {
             let destination = segue.destination as! MapsViewController
-            destination.query = "bars clubs"
+            destination.query = "bars"
         }
     }
 
